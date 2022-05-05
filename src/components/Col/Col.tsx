@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo } from 'react';
+import { ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
@@ -40,6 +40,10 @@ export interface ColProps {
    */
   className?: string;
   /**
+   * As what the component should be rendered
+   */
+  as?: string | ElementType;
+  /**
    * Children
    */
   children?: ReactNode;
@@ -55,6 +59,7 @@ export const Col = ({
   lg,
   xl,
   ul,
+  as = 'div',
   className,
   ...props
 }: ColProps) => {
@@ -95,8 +100,10 @@ export const Col = ({
     return clsx(...spans, ...starts, ...orders);
   }, []);
 
+  const Component = (as ?? 'div') as ElementType;
+
   return (
-    <div
+    <Component
       className={clsx(
         gridClasses,
         className
@@ -104,7 +111,7 @@ export const Col = ({
       {...props}
     >
       {props.children}
-    </div>
+    </Component>
   );
 };
 

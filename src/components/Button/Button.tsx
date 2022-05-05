@@ -1,4 +1,4 @@
-import { ReactNode, useMemo } from 'react';
+import { ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
@@ -36,6 +36,10 @@ export interface ButtonProps {
    */
   className?: string;
   /**
+   * As what the component should be rendered
+   */
+  as?: string | ElementType;
+  /**
    * Button contents.
    */
   children: ReactNode;
@@ -58,9 +62,10 @@ export function Button({
   block = false,
   href,
   className,
+  as,
   ...props
 }: ButtonProps) {
-  const Component = useMemo(() => (href ? 'a' : 'button'), [href]);
+  const Component = useMemo(() => (as ? as : (href ? 'a' : 'button')) as ElementType, [as, href]);
 
   return (
     <Component

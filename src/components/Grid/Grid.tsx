@@ -40,7 +40,7 @@ export interface GridProps {
   /**
    * As what the component should be rendered
    */
-  as?: string;
+  as?: string | ElementType;
   /**
    * Children
    */

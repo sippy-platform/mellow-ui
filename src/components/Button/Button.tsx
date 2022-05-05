@@ -32,6 +32,10 @@ export interface ButtonProps {
    */
   href?: string;
   /**
+   * Custom classes for the label
+   */
+  className?: string;
+  /**
    * Button contents.
    */
   children: ReactNode;
@@ -53,6 +57,7 @@ export function Button({
   disabled = false,
   block = false,
   href,
+  className,
   ...props
 }: ButtonProps) {
   const Component = useMemo(() => (href ? 'a' : 'button'), [href]);
@@ -68,7 +73,8 @@ export function Button({
           'active': active,
           [`${color}`]: variant === 'color' || variant === 'hover',
           'btn-block': block
-        }
+        },
+        className
       )}
       href={href}
       aria-disabled={disabled}

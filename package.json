@@ -1,6 +1,7 @@
 {
-  "name": "mellow-ui",
-  "files": ["dist"],
+  "name": "@sippy-platform/mellow-ui",
+  "version": "0.1.0",
+  "description": "React components for the Mellow Design System.",
   "main": "./dist/mellow-ui.umd.js",
   "module": "./dist/mellow-ui.es.js",
   "exports": {
@@ -9,13 +10,24 @@
       "require": "./dist/mellow-ui.umd.js"
     }
   },
-  "private": true,
-  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "repository": "git://github.com/sippy-platform/mellow-ui.git",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "ui-framework"
+  ],
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/sippy-platform/mellow-ui/issues"
+  },
+  "homepage": "https://sippy-platform.github.io/mellow-ui",
   "dependencies": {
     "@headlessui/react": "1.6.1",
     "clsx": "1.1.1"

@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo } from 'react';
+import { Component, ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
@@ -38,6 +38,10 @@ export interface GridProps {
    */
   className?: string;
   /**
+   * As what the component should be rendered
+   */
+  as?: string;
+  /**
    * Children
    */
   children?: ReactNode;
@@ -46,16 +50,17 @@ export interface GridProps {
 /**
  * Primary UI component for user interaction
  */
-export const Grid = ({
+export function Grid({
   xs = { grid: 12, gap: 3 },
   sm,
   md,
   lg,
   xl,
   ul,
+  as = 'div',
   className,
   ...props
-}: GridProps) => {
+}: GridProps) {
   const gridClasses = useMemo(() => {
     const grids: string[] = [];
     const gaps: string[] = [];
@@ -91,8 +96,10 @@ export const Grid = ({
     return clsx(...grids, ...gaps);
   }, []);
 
+  const Component = (as ?? 'div') as ElementType;
+
   return (
-    <div
+    <Component
       className={clsx(
         'grid',
         gridClasses,
@@ -101,7 +108,7 @@ export const Grid = ({
       {...props}
     >
       {props.children}
-    </div>
+    </Component>
   );
 };
 

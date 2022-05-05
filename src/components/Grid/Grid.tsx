@@ -10,6 +10,10 @@ interface BreakpointConfig {
 
 export interface GridProps {
   /**
+   * Grid doubles as container
+   */
+  container?: boolean;
+  /**
    * Grid definition on the xs breakpoint
    */
   xs?: GridDefinition;
@@ -51,6 +55,7 @@ export interface GridProps {
  * Primary UI component for user interaction
  */
 export function Grid({
+  container,
   xs = { grid: 12, gap: 3 },
   sm,
   md,
@@ -101,6 +106,9 @@ export function Grid({
   return (
     <Component
       className={clsx(
+        {
+          'container': container
+        },
         'grid',
         gridClasses,
         className

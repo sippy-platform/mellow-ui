@@ -1,4 +1,4 @@
-import { Component, ElementType, ReactNode, useMemo } from 'react';
+import { ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 

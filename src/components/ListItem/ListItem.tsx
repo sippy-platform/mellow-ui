@@ -1,4 +1,4 @@
-import React, { ReactNode, useMemo } from 'react';
+import { ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
@@ -51,6 +51,10 @@ export interface ListItemProps {
    * Custom classes for the container box
    */
   className?: string;
+  /**
+   * As what the component should be rendered
+   */
+  as?: string | ElementType;
 }
 
 /**
@@ -69,9 +73,10 @@ export const ListItem = ({
   endIcon,
   startAction,
   endAction,
+  as,
   ...props
 }: ListItemProps) => {
-  const Component = useMemo(() => ((startAction || endAction) ? 'label' : (href ? 'a' : (onClick ? 'button' : 'li'))), [href, onClick, startAction, endAction]);
+  const Component = useMemo(() => (as ? as : ((startAction || endAction) ? 'label' : (href ? 'a' : (onClick ? 'button' : 'li')))), [as, href, onClick, startAction, endAction]);
 
   return (
     <Component

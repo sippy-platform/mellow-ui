@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 import { Switch } from '@headlessui/react'
 
 import clsx from 'clsx';
@@ -20,7 +18,11 @@ export interface CheckboxProps {
   /**
    * Whether or not the checkbox is checked
    */
-  checked?: boolean;
+  checked: boolean;
+  /**
+   * Whether or not the checkbox is checked
+   */
+  onChange: (checked: boolean) => void;
   /**
    * Custom classes for the checkbox
    */
@@ -34,16 +36,20 @@ export const Checkbox = ({
   name,
   className,
   checked,
+  onChange,
   label,
   helper
 }: CheckboxProps) => {
-  const [checkedState, setChecked] = useState(checked ?? false);
-
   if (label || helper) {
     return (
       <Switch.Group>
         <div className={clsx('input-form', className)}>
-          <Switch className="input-check" checked={checkedState} onChange={setChecked} name={name} />
+          <Switch
+            className="input-check"
+            checked={checked}
+            onChange={onChange}
+            name={name}
+          />
           <Switch.Label>
             {label}
           </Switch.Label>
@@ -54,7 +60,7 @@ export const Checkbox = ({
   }
 
   return (
-    <Switch className="input-check" checked={checkedState} onChange={setChecked} />
+    <Switch className="input-check" checked={checked} onChange={onChange} />
   );
 };
 

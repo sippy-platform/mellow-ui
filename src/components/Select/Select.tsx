@@ -14,7 +14,7 @@ export interface SelectProps {
   /**
    * Value of the select
    */
-  value?: string;
+  value?: string | number;
   /**
    * The array of options
    */
@@ -26,11 +26,11 @@ export interface SelectProps {
   /**
    * The callback for getting the option label
    */
-  getLabel: (value: any) => string;
+  getLabel?: (value: any) => string;
   /**
    * The callback for getting the option label
    */
-  getValue: (value: any) => string;
+  getValue?: (value: any) => string;
   /**
    * Whether the radio group is disabled
    */

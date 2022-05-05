@@ -8,6 +8,10 @@ export interface InputProps {
    */
   value?: string;
   /**
+   * Placeholder of the input
+   */
+  placeholder?: string;
+  /**
    * Type of the input
    */
   type?: string;
@@ -24,6 +28,7 @@ export const Input = ({
   className,
   value,
   type = 'text',
+  placeholder,
   ...props
 }: InputProps) => {
   if (type !== 'textarea') {
@@ -35,6 +40,7 @@ export const Input = ({
           'input',
           className
         )}
+        placeholder={placeholder}
         {...props}
       />
     );
@@ -46,6 +52,7 @@ export const Input = ({
         'input',
         className
       )}
+      placeholder={placeholder}
       {...props}
     >
       {value}

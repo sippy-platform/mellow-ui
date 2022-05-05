@@ -1,11 +1,10 @@
+import { useState } from 'react';
+
 import '@sippy-platform/mellow-css/dist/css/mellow.css';
 import '@optimisegroup/valkyrie/dist/valkyrie.css';
 import './mellow-ui.css';
 
-import { Alert, AlertTitle, Button, Card, CardBody, CardFooter, CardHeader, CardLink, CardTitle, Checkbox, Col, Dialog, DialogBody, DialogHeader, Grid, InputLabel, Label, List, ListItem, ListItemDivider, Offcanvas, OffcanvasBody, OffcanvasHeader, Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels, Progress, Radio, RadioGroup, Range, Select } from './components';
-import { useState } from 'react';
-import CloseButton from './components/CloseButton';
-import Input from './components/Input';
+import { Alert, AlertTitle, Button, Card, CardBody, CardFooter, CardHeader, CardLink, CardTitle, Checkbox, CloseButton, Col, Dialog, DialogBody, DialogHeader, Grid, Input, InputLabel, Label, List, ListItem, ListItemDivider, Offcanvas, OffcanvasBody, OffcanvasHeader, Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels, Progress, Radio, RadioGroup, Range, Select } from './components';
 import ValkyrieIcon, { viHouse } from '@optimisegroup/valkyrie';
 
 function App() {
@@ -306,7 +305,7 @@ function App() {
       <h2 className="mt-3">Range</h2>
       <Range
         value={range}
-        onChange={(e) => setRange(e.target.value)}
+        onChange={(e) => setRange(e.target.value as unknown as number)}
       />
 
       <h2 className="mt-3">Select</h2>

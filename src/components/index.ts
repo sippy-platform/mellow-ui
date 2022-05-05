@@ -28,6 +28,9 @@ export type { CardTitleProps } from './CardTitle';
 export { default as Checkbox } from './Checkbox';
 export type { CheckboxProps } from './Checkbox';
 
+export { default as CloseButton } from './CloseButton';
+export type { CloseButtonProps } from './CloseButton';
+
 export { default as Col } from './Col';
 export type { ColProps } from './Col';
 
@@ -45,6 +48,9 @@ export type { DialogHeaderProps } from './DialogHeader';
 
 export { default as Grid } from './Grid';
 export type { GridProps } from './Grid';
+
+export { default as Input } from './Input';
+export type { InputProps } from './Input';
 
 export { default as InputLabel } from './InputLabel';
 export type { InputLabelProps } from './InputLabel';

@@ -80,7 +80,7 @@ export function Grid({
       if (typeof breakpointConfig === 'object' && breakpointConfig !== null) {
         ({ grid, gap } = breakpointConfig);
       } else {
-        grid = breakpointConfig;
+        grid = breakpointConfig as number;
       }
 
       if (!grid && breakpoint === 'xs') {

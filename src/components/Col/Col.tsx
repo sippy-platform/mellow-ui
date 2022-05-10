@@ -79,7 +79,7 @@ export const Col = ({
       if (typeof breakpointConfig === 'object' && breakpointConfig !== null) {
         ({ span, start, order } = breakpointConfig);
       } else {
-        span = breakpointConfig;
+        span = breakpointConfig as ColSize;
       }
 
       const infix = breakpoint === 'xs' ? '' : `-${breakpoint}`;

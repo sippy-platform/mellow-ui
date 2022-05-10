@@ -1,8 +1,8 @@
-import { ElementType, ReactNode, useMemo } from 'react';
+import { ElementType, ButtonHTMLAttributes, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
-export interface ButtonProps {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The variant of the button.
    */

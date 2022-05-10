@@ -1,25 +1,25 @@
 import clsx from 'clsx';
-import { InputHTMLAttributes } from 'react';
+import { TextareaHTMLAttributes } from 'react';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   /**
-   * Value of the input
+   * Value of the textarea
    */
   value?: string;
   /**
-   * ID of the input
+   * ID of the textarea
    */
   id?: string;
   /**
-   * Name of the input
+   * Name of the textarea
    */
   name?: string;
   /**
-   * Placeholder of the input
+   * Placeholder of the textarea
    */
   placeholder?: string;
   /**
-   * Type of the input
+   * Type of the textarea
    */
   type?: string;
   /**
@@ -31,25 +31,25 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 /**
  * Primary UI component for user interaction
  */
-export const Input = ({
+export const Textarea = ({
   className,
   value,
   type = 'text',
   placeholder,
   ...props
-}: InputProps) => {
+}: TextareaProps) => {
   return (
-    <input
-      type={type}
-      value={value}
+    <textarea
       className={clsx(
         'input',
         className
       )}
       placeholder={placeholder}
       {...props}
-    />
+    >
+      {value}
+    </textarea>
   );
 };
 
-export default Input;
+export default Textarea;

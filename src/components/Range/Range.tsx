@@ -1,8 +1,8 @@
-import { ChangeEventHandler } from 'react';
+import { ChangeEventHandler, InputHTMLAttributes } from 'react';
 
 import clsx from 'clsx';
 
-export interface RangeProps {
+export interface RangeProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
    * Minimum value of the input
    */

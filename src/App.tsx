@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 import '@sippy-platform/mellow-css/dist/css/mellow.css';
-import '@optimisegroup/valkyrie/dist/valkyrie.css';
+import '@sippy-platform/valkyrie/dist/valkyrie.css';
 import './mellow-ui.css';
 
 import { Alert, AlertTitle, Button, Card, CardBody, CardFooter, CardHeader, CardLink, CardTitle, Checkbox, CloseButton, Col, Dialog, DialogBody, DialogHeader, Grid, Input, InputLabel, Label, List, ListItem, ListItemDivider, Offcanvas, OffcanvasBody, OffcanvasHeader, Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels, Progress, Radio, RadioGroup, Range, Select } from './components';
-import ValkyrieIcon, { viHouse } from '@optimisegroup/valkyrie';
+import ValkyrieIcon, { viHouse } from '@sippy-platform/valkyrie';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -95,6 +95,12 @@ function App() {
           <CardLink>Beyond</CardLink>
         </CardBody>
         <CardFooter>Card footer</CardFooter>
+      </Card>
+
+      <Card onClick={() => alert('Clicked the card')}>
+        <CardBody>
+          <p>This is a card body.</p>
+        </CardBody>
       </Card>
 
       <h2 className="mt-3">Checkbox</h2>

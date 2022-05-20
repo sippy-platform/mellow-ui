@@ -2,7 +2,7 @@ import React from 'react';
 
 import clsx from 'clsx';
 
-import ValkyrieIcon, { viXmark } from '@optimisegroup/valkyrie';
+import ValkyrieIcon, { viXmark } from '@sippy-platform/valkyrie';
 
 export interface CloseButtonProps {
   /**

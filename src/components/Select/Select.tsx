@@ -3,7 +3,7 @@ import React, { FormEventHandler, ReactNode, Fragment, useState, useMemo } from 
 import { Listbox, Transition } from '@headlessui/react';
 
 import clsx from 'clsx';
-import ValkyrieIcon, { viAngleDown } from '@optimisegroup/valkyrie';
+import ValkyrieIcon, { viAngleDown } from '@sippy-platform/valkyrie';
 import SelectItem from '../SelectItem';
 
 export interface SelectProps {

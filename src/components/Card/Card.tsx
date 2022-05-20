@@ -1,12 +1,20 @@
-import React, { ReactNode } from 'react';
+import { ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
 export interface CardProps {
   /**
+   * Custom function when clicking
+   */
+  onClick?: () => void;
+  /**
    * Custom classes for the dialog
    */
   className?: string;
+  /**
+   * As what the component should be rendered
+   */
+  as?: string | ElementType;
   /**
    * Card contents.
    */
@@ -19,10 +27,14 @@ export interface CardProps {
 export function Card({
   className,
   children,
+  as,
+  onClick,
   ...props
 }: CardProps) {
+  const Component = useMemo(() => (as ? as : (onClick ? 'div' : 'button')) as ElementType, [as, onClick]);
+
   return (
-    <div
+    <Component
       className={clsx(
         'card',
         className
@@ -30,7 +42,7 @@ export function Card({
       {...props}
     >
       {children}
-    </div>
+    </Component>
   );
 };
 

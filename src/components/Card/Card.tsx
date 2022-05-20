@@ -31,7 +31,7 @@ export function Card({
   onClick,
   ...props
 }: CardProps) {
-  const Component = useMemo(() => (as ? as : (onClick ? 'div' : 'button')) as ElementType, [as, onClick]);
+  const Component = useMemo(() => (as ? as : (onClick ? 'button' : 'div')) as ElementType, [as, onClick]);
 
   return (
     <Component
@@ -39,6 +39,7 @@ export function Card({
         'card',
         className
       )}
+      onClick={onClick}
       {...props}
     >
       {children}

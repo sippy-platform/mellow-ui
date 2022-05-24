@@ -145,7 +145,7 @@ function App() {
 
       <Card onClick={() => alert('Clicked the card')}>
         <CardBody>
-          <p>This is a card body.</p>
+          <p>This is a clickable card.</p>
         </CardBody>
       </Card>
 

@@ -4,6 +4,9 @@ export type { AlertProps } from './Alert';
 export { default as AlertTitle } from './AlertTitle';
 export type { AlertTitleProps } from './AlertTitle';
 
+export { default as Avatar } from './Avatar';
+export type { AvatarProps } from './Avatar';
+
 export { default as Button } from './Button';
 export type { ButtonProps } from './Button';
 

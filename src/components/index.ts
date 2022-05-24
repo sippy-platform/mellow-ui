@@ -7,6 +7,12 @@ export type { AlertTitleProps } from './AlertTitle';
 export { default as Avatar } from './Avatar';
 export type { AvatarProps } from './Avatar';
 
+export { default as Breadcrumb } from './Breadcrumb';
+export type { BreadcrumbProps } from './Breadcrumb';
+
+export { default as BreadcrumbItem } from './BreadcrumbItem';
+export type { BreadcrumbItemProps } from './BreadcrumbItem';
+
 export { default as BottomBar } from './BottomBar';
 export type { BottomBarProps } from './BottomBar';
 

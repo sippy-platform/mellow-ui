@@ -4,7 +4,7 @@ import '@sippy-platform/mellow-css/dist/css/mellow.css';
 import '@sippy-platform/valkyrie/dist/valkyrie.css';
 import './mellow-ui.css';
 
-import { Alert, AlertTitle, Avatar, BottomBar, BottomBarItem, Button, Card, CardBody, CardFooter, CardHeader, CardLink, CardTitle, Checkbox, CloseButton, Col, Dialog, DialogBody, DialogHeader, Grid, Input, InputLabel, Label, List, ListItem, ListItemDivider, Offcanvas, OffcanvasBody, OffcanvasHeader, Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels, Progress, Radio, RadioGroup, Range, Select } from './components';
+import { Alert, AlertTitle, Avatar, BottomBar, BottomBarItem, Breadcrumb, BreadcrumbItem, Button, Card, CardBody, CardFooter, CardHeader, CardLink, CardTitle, Checkbox, CloseButton, Col, Dialog, DialogBody, DialogHeader, Grid, Input, InputLabel, Label, List, ListItem, ListItemDivider, Offcanvas, OffcanvasBody, OffcanvasHeader, Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels, Progress, Radio, RadioGroup, Range, Select } from './components';
 import ValkyrieIcon, { viEllipsis, viGear, viHouse, viSippy, viUser, viValkyrieSword } from '@sippy-platform/valkyrie';
 
 function App() {
@@ -70,6 +70,14 @@ function App() {
       <Avatar size="sm">SM</Avatar>
       <Avatar>LD</Avatar>
       <Avatar size="lg">LG</Avatar>
+
+      <h2 className="mt-3">Breadcrumb</h2>
+      <Breadcrumb>
+        <BreadcrumbItem><ValkyrieIcon icon={viHouse} /></BreadcrumbItem>
+        <BreadcrumbItem>Users</BreadcrumbItem>
+        <BreadcrumbItem>Settings</BreadcrumbItem>
+        <BreadcrumbItem active>System</BreadcrumbItem>
+      </Breadcrumb>
 
       <h2 className="mt-3">Bottom Bar</h2>
       <BottomBar>

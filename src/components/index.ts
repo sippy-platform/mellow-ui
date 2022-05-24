@@ -7,6 +7,12 @@ export type { AlertTitleProps } from './AlertTitle';
 export { default as Avatar } from './Avatar';
 export type { AvatarProps } from './Avatar';
 
+export { default as BottomBar } from './BottomBar';
+export type { BottomBarProps } from './BottomBar';
+
+export { default as BottomBarItem } from './BottomBarItem';
+export type { BottomBarItemProps } from './BottomBarItem';
+
 export { default as Button } from './Button';
 export type { ButtonProps } from './Button';
 

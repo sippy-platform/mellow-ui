@@ -4,8 +4,8 @@ import '@sippy-platform/mellow-css/dist/css/mellow.css';
 import '@sippy-platform/valkyrie/dist/valkyrie.css';
 import './mellow-ui.css';
 
-import { Alert, AlertTitle, Avatar, Button, Card, CardBody, CardFooter, CardHeader, CardLink, CardTitle, Checkbox, CloseButton, Col, Dialog, DialogBody, DialogHeader, Grid, Input, InputLabel, Label, List, ListItem, ListItemDivider, Offcanvas, OffcanvasBody, OffcanvasHeader, Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels, Progress, Radio, RadioGroup, Range, Select } from './components';
-import ValkyrieIcon, { viHouse } from '@sippy-platform/valkyrie';
+import { Alert, AlertTitle, Avatar, BottomBar, BottomBarItem, Button, Card, CardBody, CardFooter, CardHeader, CardLink, CardTitle, Checkbox, CloseButton, Col, Dialog, DialogBody, DialogHeader, Grid, Input, InputLabel, Label, List, ListItem, ListItemDivider, Offcanvas, OffcanvasBody, OffcanvasHeader, Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels, Progress, Radio, RadioGroup, Range, Select } from './components';
+import ValkyrieIcon, { viEllipsis, viGear, viHouse, viSippy, viUser, viValkyrieSword } from '@sippy-platform/valkyrie';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -70,6 +70,16 @@ function App() {
       <Avatar size="sm">SM</Avatar>
       <Avatar>LD</Avatar>
       <Avatar size="lg">LG</Avatar>
+
+      <h2 className="mt-3">Bottom Bar</h2>
+      <BottomBar>
+        <BottomBarItem icon={<ValkyrieIcon icon={viHouse} />} active>Home</BottomBarItem>
+        <BottomBarItem icon={<ValkyrieIcon icon={viUser} />}>Users</BottomBarItem>
+        <BottomBarItem icon={<ValkyrieIcon icon={viGear} />}>Settings</BottomBarItem>
+        <BottomBarItem icon={<ValkyrieIcon icon={viValkyrieSword} />}>Valkyrie</BottomBarItem>
+        <BottomBarItem icon={<ValkyrieIcon icon={viSippy} />}>Sippy</BottomBarItem>
+        <BottomBarItem icon={<ValkyrieIcon icon={viEllipsis} />}>More</BottomBarItem>
+      </BottomBar>
 
       <h2 className="mt-3">Buttons</h2>
       <Button>Default</Button>

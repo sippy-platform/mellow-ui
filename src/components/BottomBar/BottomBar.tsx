@@ -4,6 +4,10 @@ import clsx from 'clsx';
 
 export interface BottomBarProps {
   /**
+   * The color of the bottom bar
+   */
+  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  /**
    * Custom classes for the bottom nav
    */
   className?: string;
@@ -17,6 +21,7 @@ export interface BottomBarProps {
  * Primary UI component for user interaction
  */
 export function BottomBar({
+  color,
   children,
   className,
   ...props
@@ -25,6 +30,9 @@ export function BottomBar({
     <nav
       className={clsx(
         'bottom-bar',
+        {
+          [`${color}`]: color
+        },
         className
       )}
       {...props}

@@ -1,9 +1,10 @@
 import { Alert, AlertTitle } from '../components';
 import DemoBox from './DemoBox';
+import Layout from './Layout';
 
 function AlertDemo() {
   return (
-    <div className="my-3 container">
+    <Layout>
       <h2 className="mt-3">Alert</h2>
       <p>The Alert component allows you to quickly create simple alert messages. A default Alert component has no color.</p>
       <DemoBox>
@@ -20,7 +21,7 @@ function AlertDemo() {
           Ho my god, they killed Kenny!
         </Alert>
       </DemoBox>
-    </div>
+    </Layout>
   );
 }
 

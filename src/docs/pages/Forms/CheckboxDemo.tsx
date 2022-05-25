@@ -1,14 +1,13 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Checkbox } from "../../components";
+import { Checkbox } from "@components";
 import { useState } from "react";
 
 export default function CheckboxDemo() {
   const [checkbox, setCheckbox] = useState(false);
 
   return (
-    <Layout>
+    <>
       <h2>Checkbox</h2>
       <DemoBox>
         <Checkbox
@@ -18,6 +17,6 @@ export default function CheckboxDemo() {
           helper="Basic checkbox helper"
         />
       </DemoBox>
-    </Layout>
+    </>
   );
 }

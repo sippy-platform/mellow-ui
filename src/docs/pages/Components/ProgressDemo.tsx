@@ -1,11 +1,10 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Progress } from "../../components";
+import { Progress } from "@components";
 
 export default function ProgressDemo() {
   return (
-    <Layout>
+    <>
       <h2>Progress</h2>
       <DemoBox>
         <div>
@@ -27,6 +26,6 @@ export default function ProgressDemo() {
           <Progress color="grey" value={100} className="mt-1" />
         </div>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

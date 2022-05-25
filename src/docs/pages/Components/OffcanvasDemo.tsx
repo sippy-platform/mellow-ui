@@ -1,7 +1,6 @@
 import { useState } from "react";
 
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
 import {
   Button,
@@ -9,13 +8,13 @@ import {
   Offcanvas,
   OffcanvasBody,
   OffcanvasHeader,
-} from "../../components";
+} from "@components";
 
 export default function OffcanvasDemo() {
   const [canvas, setCanvas] = useState(false);
 
   return (
-    <Layout>
+    <>
       <h2>Offcanvas</h2>
       <DemoBox>
         <div>
@@ -33,6 +32,6 @@ export default function OffcanvasDemo() {
           </Offcanvas>
         </div>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

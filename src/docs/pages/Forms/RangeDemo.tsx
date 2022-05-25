@@ -1,15 +1,14 @@
 import { useState } from "react";
 
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Range } from "../../components";
+import { Range } from "@components";
 
 export default function RangeDemo() {
   const [range, setRange] = useState(50);
 
   return (
-    <Layout>
+    <>
       <h2>Range</h2>
       <DemoBox>
         <Range
@@ -17,6 +16,6 @@ export default function RangeDemo() {
           onChange={(e) => setRange(e.target.value as unknown as number)}
         />
       </DemoBox>
-    </Layout>
+    </>
   );
 }

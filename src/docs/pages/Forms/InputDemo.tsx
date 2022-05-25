@@ -1,11 +1,10 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Grid, Input } from "../../components";
+import { Grid, Input } from "@components";
 
 export default function InputDemo() {
   return (
-    <Layout>
+    <>
       <h2>Input</h2>
       <DemoBox>
         <Grid xs={{ grid: 1, gap: 3 }}>
@@ -15,6 +14,6 @@ export default function InputDemo() {
           <Input type="textarea" placeholder="Textarea" />
         </Grid>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

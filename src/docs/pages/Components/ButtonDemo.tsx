@@ -1,11 +1,10 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Button } from "../../components";
+import { Button } from "@components";
 
 export default function ButtonDemo() {
   return (
-    <Layout>
+    <>
       <h2>Button</h2>
       <DemoBox>
         <Button>Default</Button>
@@ -148,6 +147,6 @@ export default function ButtonDemo() {
           </Button>
         </div>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

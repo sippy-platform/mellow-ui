@@ -1,11 +1,10 @@
-import DemoBox from '../components/DemoBox';
-import Layout from '../Components/Layout';
+import DemoBox from '@docs/components/DemoBox';
 
-import { Alert, AlertTitle } from '../../components';
+import { Alert, AlertTitle } from '@components';
 
 export default function AlertDemo() {
   return (
-    <Layout>
+    <>
       <h2>Alert</h2>
       <p>The Alert component allows you to quickly create simple alert messages. A default Alert component has no color.</p>
       <DemoBox>
@@ -22,6 +21,6 @@ export default function AlertDemo() {
           Ho my god, they killed Kenny!
         </Alert>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

@@ -1,11 +1,10 @@
-import DemoBox from '../components/DemoBox';
-import Layout from '../Components/Layout';
+import DemoBox from '@docs/components/DemoBox';
 
-import { Avatar } from '../../components';
+import { Avatar } from '@components';
 
 export default function AvatarDemo() {
   return (
-    <Layout>
+    <>
       <h2>Avatar</h2>
       <p>Display avatars to represent your users.</p>
       <DemoBox>
@@ -66,6 +65,6 @@ export default function AvatarDemo() {
           <Avatar variant="plated" color="accent">AT</Avatar>
         </div>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

@@ -1,12 +1,11 @@
-import DemoBox from '../components/DemoBox';
-import Layout from '../Components/Layout';
+import DemoBox from '@docs/components/DemoBox';
 
-import { Breadcrumb, BreadcrumbItem } from '../../components';
+import { Breadcrumb, BreadcrumbItem } from '@components';
 import ValkyrieIcon, { viHouse } from '@sippy-platform/valkyrie';
 
 export default function BreadcrumbDemo() {
   return (
-    <Layout>
+    <>
       <h2>Breadcrumb</h2>
       <p>Show your users where they are.</p>
       <DemoBox>
@@ -27,6 +26,6 @@ export default function BreadcrumbDemo() {
           <BreadcrumbItem active>System</BreadcrumbItem>
         </Breadcrumb>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

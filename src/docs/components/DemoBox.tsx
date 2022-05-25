@@ -4,7 +4,7 @@ import { refractor } from 'refractor';
 import { toH } from 'hast-to-hyperscript';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 
-import { Card, CardBody } from '../../components';
+import { Card, CardBody } from '@components';
 
 export default function DemoBox({ children }) {
   const componentString = reactElementToJSXString(children);

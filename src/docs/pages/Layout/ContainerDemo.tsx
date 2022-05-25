@@ -1,11 +1,10 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Container } from "../../components";
+import { Container } from "@components";
 
 export default function ContainerDemo() {
   return (
-    <Layout>
+    <>
       <h2>Container</h2>
       <p>A container helps you place content on your website. It's a great component to enclose other Mellow components in.</p>
       <DemoBox>
@@ -13,6 +12,6 @@ export default function ContainerDemo() {
           This is a container
         </Container>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

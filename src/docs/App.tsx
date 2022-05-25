@@ -1,65 +1,37 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
+import '../mellow-ui.css';
 import '@sippy-platform/mellow-css/dist/css/mellow.css';
 import '@sippy-platform/valkyrie/dist/valkyrie.css';
-import '../mellow-ui.css';
 
-import AlertDemo from './pages/AlertDemo';
-import AvatarDemo from './pages/AvatarDemo';
-import BottomBarDemo from './pages/BottomBarDemo';
-import BreadcrumbDemo from './pages/BreadcrumbDemo';
-import ButtonDemo from './pages/ButtonDemo';
-import CheckboxDemo from './pages/CheckboxDemo';
-import Home from './pages/Home';
-import CardDemo from './pages/CardDemo';
-import GridDemo from './pages/GridDemo';
-import ContainerDemo from './pages/ContainerDemo';
-import DialogDemo from './pages/DialogDemo';
-import InputDemo from './pages/InputDemo';
-import InputLabelDemo from './pages/InputLabelDemo';
-import LabelDemo from './pages/LAbelDemo';
-import ListDemo from './pages/ListDemo';
-import OffcanvasDemo from './pages/ListDemo';
-import PivotDemo from './pages/PivotDemo';
-import ProgressDemo from './pages/ProgressDemo';
-import RadioDemo from './pages/RadioDemo';
-import RangeDemo from './pages/RangeDemo';
-import SelectDemo from './pages/SelectDemo';
+import AlertDemo from './pages/Components/AlertDemo';
+import AvatarDemo from './pages/Components/AvatarDemo';
+import BottomBarDemo from './pages/Components/BottomBarDemo';
+import BreadcrumbDemo from './pages/Components/BreadcrumbDemo';
+import ButtonDemo from './pages/Components/ButtonDemo';
+import CardDemo from './pages/Components/CardDemo';
+import CheckboxDemo from './pages/Forms/CheckboxDemo';
+import ContainerDemo from './pages/Layout/ContainerDemo';
+import DialogDemo from './pages/Components/DialogDemo';
+import GridDemo from './pages/Layout/GridDemo';
+import Installation from './pages/GetStarted/Installation';
+import InputDemo from './pages/Forms/InputDemo';
+import InputLabelDemo from './pages/Forms/InputLabelDemo';
+import LabelDemo from './pages/Components/LabelDemo';
+import Layout from './components/Layout';
+import ListDemo from './pages/Components/ListDemo';
+import OffcanvasDemo from './pages/Components/OffcanvasDemo';
+import PivotDemo from './pages/Components/PivotDemo';
+import ProgressDemo from './pages/Components/ProgressDemo';
+import RadioDemo from './pages/Forms/RadioDemo';
+import RangeDemo from './pages/Forms/RangeDemo';
+import SelectDemo from './pages/Forms/SelectDemo';
 
 function App() {
   return (
-    <>
-      <div className="my-3 container">
-        <h1 className="marketing-4 fw-bold text-marketing">Mellow UI</h1>
-        <div className="btn-toolbar">
-          <Link className="btn btn-default btn-sm" to="/">Home</Link>
-          <div className="btn-group">
-            <Link className="btn btn-default btn-sm" to="/alert">Alert</Link>
-            <Link className="btn btn-default btn-sm" to="/avatar">Avatar</Link>
-            <Link className="btn btn-default btn-sm" to="/bottombar">Bottom Bar</Link>
-            <Link className="btn btn-default btn-sm" to="/breadcrumb">Breadcrumb</Link>
-            <Link className="btn btn-default btn-sm" to="/button">Button</Link>
-            <Link className="btn btn-default btn-sm" to="/card">Card</Link>
-            <Link className="btn btn-default btn-sm" to="/container">Container</Link>
-            <Link className="btn btn-default btn-sm" to="/checkbox">Checkbox</Link>
-            <Link className="btn btn-default btn-sm" to="/grid">Grid</Link>
-            <Link className="btn btn-default btn-sm" to="/dialog">Dialog</Link>
-            <Link className="btn btn-default btn-sm" to="/input">Input</Link>
-            <Link className="btn btn-default btn-sm" to="/inputlabel">Input Label</Link>
-            <Link className="btn btn-default btn-sm" to="/label">Label</Link>
-            <Link className="btn btn-default btn-sm" to="/list">List</Link>
-            <Link className="btn btn-default btn-sm" to="/offcanvas">Offcanvas</Link>
-            <Link className="btn btn-default btn-sm" to="/pivot">Pivot</Link>
-            <Link className="btn btn-default btn-sm" to="/progress">Progress</Link>
-            <Link className="btn btn-default btn-sm" to="/radio">Radio</Link>
-            <Link className="btn btn-default btn-sm" to="/range">Range</Link>
-            <Link className="btn btn-default btn-sm" to="/select">Select</Link>
-          </div>
-        </div>
-      </div>
-
+    <Layout>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/installation" element={<Installation />} />
         <Route path="/alert" element={<AlertDemo />} />
         <Route path="/avatar" element={<AvatarDemo />} />
         <Route path="/bottombar" element={<BottomBarDemo />} />
@@ -81,7 +53,7 @@ function App() {
         <Route path="/range" element={<RangeDemo />} />
         <Route path="/select" element={<SelectDemo />} />
       </Routes>
-    </>
+    </Layout>
   );
 }
 

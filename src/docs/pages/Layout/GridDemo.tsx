@@ -1,11 +1,10 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Grid, Col } from "../../components";
+import { Grid, Col } from "@components";
 
 export default function GridDemo() {
   return (
-    <Layout>
+    <>
       <h2>Grid</h2>
       <DemoBox>
         <Grid>
@@ -20,6 +19,6 @@ export default function GridDemo() {
           </Col>
         </Grid>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

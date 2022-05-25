@@ -1,11 +1,10 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels } from "../../components";
+import { Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels } from "@components";
 
 export default function PivotDemo() {
   return (
-    <Layout>
+    <>
       <h2>Pivot</h2>
       <DemoBox>
         <Pivot>
@@ -51,6 +50,6 @@ export default function PivotDemo() {
           </PivotPanels>
         </Pivot>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

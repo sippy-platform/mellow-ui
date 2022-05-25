@@ -1,15 +1,14 @@
 import { useState } from "react";
 
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Select } from "../../components";
+import { Select } from "@components";
 
 export default function SelectDemo() {
   const [select, setSelect] = useState(5);
 
   return (
-    <Layout>
+    <>
       <h2>Select</h2>
       <DemoBox>
         <Select
@@ -39,6 +38,6 @@ export default function SelectDemo() {
           ]}
         />
       </DemoBox>
-    </Layout>
+    </>
   );
 }

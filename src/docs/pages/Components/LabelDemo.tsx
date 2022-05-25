@@ -1,11 +1,10 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Label } from "../../components";
+import { Label } from "@components";
 
 export default function LabelDemo() {
   return (
-    <Layout>
+    <>
       <h2>Label</h2>
       <p>Display avatars to represent your users.</p>
       <DemoBox>
@@ -148,6 +147,6 @@ export default function LabelDemo() {
           </Label>
         </div>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

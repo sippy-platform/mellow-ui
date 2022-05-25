@@ -1,12 +1,11 @@
-import DemoBox from '../components/DemoBox';
-import Layout from '../components/Layout';
+import DemoBox from '@docs/components/DemoBox';
 
-import { BottomBar, BottomBarItem } from '../../components';
+import { BottomBar, BottomBarItem } from '@components';
 import ValkyrieIcon, { viEllipsis, viGear, viHouse, viSippy, viUser, viValkyrieSword } from '@sippy-platform/valkyrie';
 
 export default function BottomBarDemo() {
   return (
-    <Layout>
+    <>
       <h2>Bottom Bar</h2>
       <DemoBox>
         <BottomBar>
@@ -18,6 +17,6 @@ export default function BottomBarDemo() {
           <BottomBarItem icon={<ValkyrieIcon icon={viEllipsis} />}>More</BottomBarItem>
         </BottomBar>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

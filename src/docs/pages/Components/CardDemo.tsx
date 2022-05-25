@@ -1,5 +1,4 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
 import {
   Card,
@@ -8,11 +7,11 @@ import {
   CardHeader,
   CardLink,
   CardTitle,
-} from "../../components";
+} from "@components";
 
 export default function CardDemo() {
   return (
-    <Layout>
+    <>
       <h2>Card</h2>
       <p>Show content in a card.</p>
       <DemoBox>
@@ -36,6 +35,6 @@ export default function CardDemo() {
           </CardBody>
         </Card>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

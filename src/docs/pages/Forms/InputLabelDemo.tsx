@@ -1,15 +1,14 @@
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { InputLabel } from "../../components";
+import { InputLabel } from "@components";
 
 export default function InputLabelDemo() {
   return (
-    <Layout>
+    <>
       <h2>Input Label</h2>
       <DemoBox>
         <InputLabel>Input label</InputLabel>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

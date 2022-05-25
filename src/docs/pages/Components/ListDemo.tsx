@@ -1,16 +1,15 @@
 import { useState } from "react";
 
-import DemoBox from "../components/DemoBox";
-import Layout from "../components/Layout";
+import DemoBox from "@docs/components/DemoBox";
 
-import { Checkbox, List, ListItem, ListItemDivider } from "../../components";
+import { Checkbox, List, ListItem, ListItemDivider } from "@components";
 import ValkyrieIcon, { viHouse } from "@sippy-platform/valkyrie";
 
 export default function ListDemo() {
   const [listBox, setListBox] = useState(false);
 
   return (
-    <Layout>
+    <>
       <h2>List</h2>
       <DemoBox>
         <List dividers border>
@@ -44,6 +43,6 @@ export default function ListDemo() {
           />
         </List>
       </DemoBox>
-    </Layout>
+    </>
   );
 }

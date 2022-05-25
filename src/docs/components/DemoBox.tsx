@@ -4,9 +4,9 @@ import { refractor } from 'refractor';
 import { toH } from 'hast-to-hyperscript';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 
-import { Card, CardBody } from '../components';
+import { Card, CardBody } from '../../components';
 
-function DemoBox({ children }) {
+export default function DemoBox({ children }) {
   const componentString = reactElementToJSXString(children);
   const tree = refractor.highlight(componentString, 'html');
   const exampleComponent = toH(createElement, tree);
@@ -30,5 +30,3 @@ function DemoBox({ children }) {
     </Card>
   );
 }
-
-export default DemoBox;

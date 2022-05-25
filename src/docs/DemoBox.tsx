@@ -2,12 +2,12 @@ import { createElement } from 'react';
 
 import { refractor } from 'refractor';
 import { toH } from 'hast-to-hyperscript';
-import jsxToString from 'jsx-to-string';
+import reactElementToJSXString from 'react-element-to-jsx-string';
 
 import { Card, CardBody } from '../components';
 
 function DemoBox({ children }) {
-  const componentString = jsxToString(children);
+  const componentString = reactElementToJSXString(children);
   const tree = refractor.highlight(componentString, 'html');
   const exampleComponent = toH(createElement, tree);
 

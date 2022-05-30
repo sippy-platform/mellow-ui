@@ -1,8 +1,8 @@
-import { ElementType, ReactNode, useMemo } from 'react';
+import { ButtonHTMLAttributes, ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
-export interface CardProps {
+export interface CardProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Custom function when clicking
    */

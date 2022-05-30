@@ -32,29 +32,47 @@ export const Radio = ({
   label,
   helper
 }: RadioProps) => {
+  if (label || helper) {
+    return (
+      <RadioGroupPrimitives.Option
+        value={value}
+        className={clsx('input-form', className)}
+      >
+        {({ checked }: { checked: boolean }) => (
+          <>
+            <input
+              type="radio"
+              className="input-check"
+              checked={checked}
+              readOnly
+            />
+            <RadioGroupPrimitives.Label>
+              {label}
+            </RadioGroupPrimitives.Label>
+            <RadioGroupPrimitives.Description
+              as="span"
+              className="input-text"
+            >
+              {helper}
+            </RadioGroupPrimitives.Description>
+          </>
+        )}
+      </RadioGroupPrimitives.Option>
+    );
+  }
+
   return (
     <RadioGroupPrimitives.Option
       value={value}
-      className={clsx('input-form', className)}
+      className={clsx('d-grid', className)}
     >
       {({ checked }: { checked: boolean }) => (
-        <>
-          <input
-            type="radio"
-            className="input-check"
-            checked={checked}
-            readOnly
-          />
-          <RadioGroupPrimitives.Label>
-            {label}
-          </RadioGroupPrimitives.Label>
-          <RadioGroupPrimitives.Description
-            as="span"
-            className="input-text"
-          >
-            {helper}
-          </RadioGroupPrimitives.Description>
-        </>
+        <input
+          type="radio"
+          className="input-check"
+          checked={checked}
+          readOnly
+        />
       )}
     </RadioGroupPrimitives.Option>
   );

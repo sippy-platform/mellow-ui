@@ -20,5 +20,11 @@ export default defineConfig({
       }
     }
   },
-  plugins: [react(), dts()]
+  plugins: [react(), dts()],
+  resolve: {
+    alias: {
+      '@docs': path.resolve(__dirname, './src/docs'),
+      '@components': path.resolve(__dirname, './src/components'),
+    },
+  }
 })

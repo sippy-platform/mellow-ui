@@ -4,6 +4,21 @@ export type { AlertProps } from './Alert';
 export { default as AlertTitle } from './AlertTitle';
 export type { AlertTitleProps } from './AlertTitle';
 
+export { default as Avatar } from './Avatar';
+export type { AvatarProps } from './Avatar';
+
+export { default as Breadcrumb } from './Breadcrumb';
+export type { BreadcrumbProps } from './Breadcrumb';
+
+export { default as BreadcrumbItem } from './BreadcrumbItem';
+export type { BreadcrumbItemProps } from './BreadcrumbItem';
+
+export { default as BottomBar } from './BottomBar';
+export type { BottomBarProps } from './BottomBar';
+
+export { default as BottomBarItem } from './BottomBarItem';
+export type { BottomBarItemProps } from './BottomBarItem';
+
 export { default as Button } from './Button';
 export type { ButtonProps } from './Button';
 

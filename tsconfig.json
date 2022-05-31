@@ -15,7 +15,11 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "paths": {
+      "@docs/*": ["./src/docs/*"],
+      "@components/*": ["./src/components/*"]
+    }
   },
   "include": ["src/components"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -70,6 +70,18 @@ export type { ListItemProps } from './ListItem';
 export { default as ListItemDivider } from './ListItemDivider';
 export type { ListItemDividerProps } from './ListItemDivider';
 
+export { default as Menu } from './Menu';
+export type { MenuProps } from './Menu';
+
+export { default as MenuItem } from './MenuItem';
+export type { MenuItemProps } from './MenuItem';
+
+export { default as MenuItems } from './MenuItems';
+export type { MenuItemsProps } from './MenuItems';
+
+export { default as MenuTrigger } from './MenuTrigger';
+export type { MenuTriggerProps } from './MenuTrigger';
+
 export { default as Offcanvas } from './Offcanvas';
 export type { OffcanvasProps } from './Offcanvas';
 

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Container, List, ListItem, ListItemDivider } from "@components";
+import { Container, List, ListItem } from "@components";
 
 import './layout.scss';
 
@@ -41,13 +41,14 @@ export default function Layout({ children }) {
             <p className="h6 mb-2 mt-3 ms-3">Components</p>
             <ListItem primary="Alert" onClick={() => navigate('/alert')} />
             <ListItem primary="Avatar" onClick={() => navigate('/avatar')} />
-            <ListItem primary="Bottom" onClick={() => navigate('/bottombar')} />
+            <ListItem primary="Bottom Bar" onClick={() => navigate('/bottombar')} />
             <ListItem primary="Breadcrumb" onClick={() => navigate('/breadcrumb')} />
             <ListItem primary="Button" onClick={() => navigate('/button')} />
             <ListItem primary="Card" onClick={() => navigate('/card')} />
             <ListItem primary="Dialog" onClick={() => navigate('/dialog')} />
             <ListItem primary="Label" onClick={() => navigate('/label')} />
             <ListItem primary="List" onClick={() => navigate('/list')} />
+            <ListItem primary="Menu" onClick={() => navigate('/menu')} />
             <ListItem primary="Offcanvas" onClick={() => navigate('/offcanvas')} />
             <ListItem primary="Pivot" onClick={() => navigate('/pivot')} />
             <ListItem primary="Progress" onClick={() => navigate('/progress')} />

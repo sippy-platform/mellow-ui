@@ -2,11 +2,13 @@ import { ReactNode } from 'react';
 
 import { Menu as MenuPrimitive } from '@headlessui/react';
 
+import clsx from 'clsx';
+
 export interface MenuItemsProps {
   /**
-   * The open state
+   * Custom classes for the label
    */
-  open: boolean;
+  className?: string;
   /**
    * The contents of the dialog
    */
@@ -17,12 +19,18 @@ export interface MenuItemsProps {
  * Primary UI component for user interaction
  */
 export const MenuItems = ({
-  open,
   children,
+  className,
   ...props
 }: MenuItemsProps) => {
   return (
-    <MenuPrimitive.Items className="dropdown-menu" {...props}>
+    <MenuPrimitive.Items
+      className={clsx(
+        'dropdown-menu',
+        className
+      )}
+      {...props}
+    >
       {children}
     </MenuPrimitive.Items>
   );

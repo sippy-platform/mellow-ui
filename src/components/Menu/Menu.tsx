@@ -24,8 +24,10 @@ export const Menu = ({
   ...props
 }: MenuProps) => {
   return (
-    <MenuPrimitive as="div" className="dropdown" {...props}>
-      {children}
+    <MenuPrimitive {...props}>
+      <div className="dropdown">
+        {children}
+      </div>
     </MenuPrimitive>
   );
 };

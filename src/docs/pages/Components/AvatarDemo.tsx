@@ -31,42 +31,42 @@ export default function AvatarDemo() {
       <p>If you rather have Mellow use the default color, you can do so by setting the <code>color</code> prop. Setting <code>color</code> as a boolean property has the same effect as setting <code>color</code> to <code>accent</code>.</p>
       <DemoBox>
         <div>
-          <Avatar label="MS" color />
-          <Avatar label="RG" color />
-          <Avatar label="KL" color />
-          <Avatar label="VR" color />
-          <Avatar label="UP" color />
-          <Avatar label="GL" color />
-          <Avatar label="RL" color />
-          <Avatar label="SX" color />
-          <Avatar label="QE" color />
-          <Avatar label="HE" color />
-          <Avatar label="PR" color />
-          <Avatar label="NL" color />
-          <Avatar label="YT" color />
+          <Avatar label="Brennan Curtis" color />
+          <Avatar label="Diane Earl" color />
+          <Avatar label="Verna Lydia" color />
+          <Avatar label="Brendo Iola" color />
+          <Avatar label="Christine Deborah" color />
+          <Avatar label="Alexis Elinor" color />
+          <Avatar label="Bailey Leone" color />
+          <Avatar label="Seymour Luvenia" color />
+          <Avatar label="Dewayne Myrtle" color />
+          <Avatar label="Maynard Bambi" color />
+          <Avatar label="Kate Bishop" color />
+          <Avatar label="Alger Solomon" color />
+          <Avatar label="Dewey Celestine" color />
         </div>
       </DemoBox>
       <h3>Colors</h3>
       <p>The Avatar component provides support for the color prop.</p>
       <DemoBox>
         <div>
-          <Avatar color="red" label="RD" />
-          <Avatar color="orange" label="OE" />
-          <Avatar color="amber" label="AR" />
-          <Avatar color="yellow" label="YW" />
-          <Avatar color="lime" label="LE" />
-          <Avatar color="green" label="GN" />
-          <Avatar color="teal" label="TL" />
-          <Avatar color="cyan" label="CN" />
-          <Avatar color="blue" label="BE" />
-          <Avatar color="indigo" label="IO" />
-          <Avatar color="violet" label="VT" />
-          <Avatar color="purple" label="PE" />
-          <Avatar color="pink" label="PK" />
-          <Avatar color="rose" label="RE" />
-          <Avatar color="brown" label="BN" />
-          <Avatar color="grey" label="GY" />
-          <Avatar color="accent" label="AT" />
+          <Avatar color="red" label="Red" />
+          <Avatar color="orange" label="Orange" />
+          <Avatar color="amber" label="Amber" />
+          <Avatar color="yellow" label="Yellow" />
+          <Avatar color="lime" label="Lime" />
+          <Avatar color="green" label="Green" />
+          <Avatar color="teal" label="Teal" />
+          <Avatar color="cyan" label="Cyan" />
+          <Avatar color="blue" label="Blue" />
+          <Avatar color="indigo" label="Indigo" />
+          <Avatar color="violet" label="Violet" />
+          <Avatar color="purple" label="Purple" />
+          <Avatar color="pink" label="Pink" />
+          <Avatar color="rose" label="Rose" />
+          <Avatar color="brown" label="Brown" />
+          <Avatar color="grey" label="Grey" />
+          <Avatar color="accent" label="Accent" />
         </div>
       </DemoBox>
       <h3>Sizes</h3>
@@ -99,6 +99,14 @@ export default function AvatarDemo() {
           <Avatar variant="plated" color="brown" label="BN" />
           <Avatar variant="plated" color="grey" label="GY" />
           <Avatar variant="plated" color="accent" label="AT" />
+        </div>
+      </DemoBox>
+      <h3>Disable initials</h3>
+      <p>Sometimes you don't want the label visible to the user only to be the initials. You can disable this behavior by passing <code>disableInitials</code> to the component.</p>
+      <DemoBox>
+        <div>
+          <Avatar label="Initials" className="me-3" />
+          <Avatar label="Initials" disableInitials />
         </div>
       </DemoBox>
     </>

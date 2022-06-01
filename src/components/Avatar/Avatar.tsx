@@ -24,6 +24,10 @@ export interface AvatarProps {
    */
   size?: 'sm' | 'md' | 'lg';
   /**
+   * Disable initials.
+   */
+  disableInitials?: boolean;
+  /**
    * Custom classes for the label
    */
   className?: string;
@@ -42,6 +46,7 @@ export default function Avatar({
   variant = 'default',
   size = 'md',
   color,
+  disableInitials,
   className,
   ...props
 }: AvatarProps) {
@@ -55,6 +60,15 @@ export default function Avatar({
     hash = Math.abs(hash);
     return hash;
   };
+
+  const avatarLabel = useMemo(() => {
+    if (disableInitials) {
+      return label;
+    }
+
+    let initials = label?.match(/\b\w/g) || [];
+    return ((initials.shift() || '') + (initials.pop() || '')).toUpperCase();
+  }, [label, disableInitials])
 
   const avatarColor = useMemo(() => {
     if (!color) {
@@ -81,7 +95,7 @@ export default function Avatar({
       )}
       {...props}
     >
-      {icon || label}
+      {icon || avatarLabel}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import DemoBox from '@docs/components/DemoBox';
 
 import { Avatar } from '@components';
+import ValkyrieIcon, { viUser } from '@sippy-platform/valkyrie';
 
 export default function AvatarDemo() {
   return (
@@ -99,6 +100,13 @@ export default function AvatarDemo() {
           <Avatar variant="plated" color="brown" label="BN" />
           <Avatar variant="plated" color="grey" label="GY" />
           <Avatar variant="plated" color="accent" label="AT" />
+        </div>
+      </DemoBox>
+      <h3>Icon</h3>
+      <p>You can pass an icon with the `icon` prop. When you give the Avatar component an icon, it will show the icon instead of the label.</p>
+      <DemoBox>
+        <div>
+          <Avatar label="Wanda Johnson" icon={<ValkyrieIcon icon={viUser} />} />
         </div>
       </DemoBox>
       <h3>Disable initials</h3>

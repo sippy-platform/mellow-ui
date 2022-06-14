@@ -5,7 +5,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
    * Value of the input
    */
-  value?: string | number | null;
+  value?: string | ReadonlyArray<string> | number | undefined;
   /**
    * ID of the input
    */

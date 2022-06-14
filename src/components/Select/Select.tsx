@@ -1,4 +1,4 @@
-import React, { FormEventHandler, ReactNode, Fragment, useState, useMemo } from 'react';
+import React, { FormEventHandler, ReactNode, Fragment, useMemo } from 'react';
 
 import { Listbox, Transition } from '@headlessui/react';
 
@@ -7,6 +7,10 @@ import ValkyrieIcon, { viAngleDown } from '@sippy-platform/valkyrie';
 import SelectItem from '../SelectItem';
 
 export interface SelectProps {
+  /**
+   * ID of the input
+   */
+  id?: string;
   /**
    * The name attached of the radio item
    */
@@ -22,7 +26,7 @@ export interface SelectProps {
   /**
    * The callback for changing values
    */
-  onChange: ((value: string) => void) | (FormEventHandler<HTMLDivElement> & ((value: string) => void));
+  onChange: ((value: string) => void) | (FormEventHandler<HTMLDivElement> & ((value: string | number | null) => void));
   /**
    * The callback for getting the option label
    */
@@ -49,6 +53,7 @@ export interface SelectProps {
  * Primary UI component for user interaction
  */
 export const Select = ({
+  id,
   name,
   className,
   options,
@@ -58,12 +63,14 @@ export const Select = ({
   getValue = (x) => x.value,
   disabled
 }: SelectProps) => {
+  const uniqueName = name ?? id;
   const currentValue = useMemo(() => {
     return options.find((option) => getValue(option) === value);
   }, [options, value]);
+
   return (
     <div className="position-relative">
-      <Listbox value={value} onChange={onChange} disabled={disabled} name={name}>
+      <Listbox value={value} onChange={onChange} disabled={disabled} name={uniqueName}>
         <Listbox.Button className={clsx('input-select', className)}>
           <span className="text-truncate">{getLabel(currentValue)}</span>
           <span className="d-flex align-items-center">

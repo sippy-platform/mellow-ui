@@ -3,10 +3,6 @@ import { InputHTMLAttributes } from 'react';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
-   * Value of the input
-   */
-  value?: string | ReadonlyArray<string> | number | undefined;
-  /**
    * ID of the input
    */
   id?: string;
@@ -14,6 +10,10 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
    * Name of the input
    */
   name?: string;
+  /**
+   * Value of the input
+   */
+  value?: string | ReadonlyArray<string> | number | undefined;
   /**
    * Placeholder of the input
    */
@@ -32,14 +32,20 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
  * Primary UI component for user interaction
  */
 export const Input = ({
+  id,
+  name,
   className,
   value,
   type = 'text',
   placeholder,
   ...props
 }: InputProps) => {
+  const uniqueName = name ?? id;
+
   return (
     <input
+      name={uniqueName}
+      id={id}
       type={type}
       value={value}
       className={clsx(

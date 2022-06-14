@@ -26,7 +26,7 @@ export const InputLabel = ({
   id
 }: InputLabelProps) => {
   return (
-    <label className={clsx('input-label', className)} htmlFor={id}>
+    <label className={clsx('input-label', className)} htmlFor={id} id={`${id}-label`}>
       {children}
     </label>
   );

@@ -26,7 +26,7 @@ export interface SelectProps {
   /**
    * The callback for changing values
    */
-  onChange: ((value: string | number | null) => void) | (FormEventHandler<HTMLDivElement> & ((value: string | number | null) => void));
+  onChange: (value: string | number | null) => void;
   /**
    * The callback for getting the option label
    */

@@ -91,7 +91,7 @@ export const Select = ({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="position-absolute top-100 end-auto bottom-auto start-0 overflow-auto w-100 rounded bg-white p-1 mt-1 shadow-2 list-none">
+          <Listbox.Options className="listbox">
             {options.map((option, key) => (
               <SelectItem option={option} getValue={getValue} getLabel={getLabel} key={key} />
             ))}

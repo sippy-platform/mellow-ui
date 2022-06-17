@@ -12,9 +12,13 @@ export interface SelectProps {
    */
   id?: string;
   /**
-   * The name attached of the radio item
+   * The name attached of the select
    */
   name?: string;
+  /**
+   * The placeholder for the select
+   */
+  placeholder?: string;
   /**
    * Value of the select
    */
@@ -55,6 +59,7 @@ export interface SelectProps {
 export const Select = ({
   id,
   name,
+  placeholder,
   className,
   options,
   value,
@@ -72,7 +77,7 @@ export const Select = ({
     <div className="position-relative">
       <Listbox value={value} onChange={onChange} disabled={disabled} name={uniqueName}>
         <Listbox.Button className={clsx('input-select', className)}>
-          <span className="text-truncate">{getLabel(currentValue)}</span>
+          <span className="text-truncate">{getLabel(currentValue) || <span className="placeholder">{placeholder}</span>}</span>
           <span className="d-flex align-items-center">
             <ValkyrieIcon icon={viAngleDown} />
           </span>

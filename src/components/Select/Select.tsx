@@ -66,7 +66,8 @@ export const Select = ({
   onChange,
   getLabel = (x) => x.label,
   getValue = (x) => x.value,
-  disabled
+  disabled,
+  ...props
 }: SelectProps) => {
   const uniqueName = name ?? id;
   const currentValue = useMemo(() => {
@@ -76,7 +77,7 @@ export const Select = ({
   return (
     <div className="position-relative">
       <Listbox value={value} onChange={onChange} disabled={disabled} name={uniqueName}>
-        <Listbox.Button className={clsx('input-select', className)}>
+        <Listbox.Button className={clsx('input-select', className)} {...props}>
           <span className="text-truncate">{getLabel(currentValue) || <span className="placeholder">{placeholder}</span>}</span>
           <span className="d-flex align-items-center">
             <ValkyrieIcon icon={viAngleDown} />

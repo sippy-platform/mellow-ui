@@ -1,4 +1,5 @@
 import { ReactNode, useMemo } from 'react';
+import useColor from '@hooks/useColor';
 
 import clsx from 'clsx';
 
@@ -50,16 +51,7 @@ export default function Avatar({
   className,
   ...props
 }: AvatarProps) {
-  const colors = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'teal', 'cyan', 'blue', 'indigo', 'violet', 'purple', 'pink', 'rose', 'brown', 'grey'];
-
-  const getHashOfString = (str: string) => {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      hash = str.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    hash = Math.abs(hash);
-    return hash;
-  };
+  const { color: hookColor } = useColor(label);
 
   const avatarLabel = useMemo(() => {
     if (disableInitials) {
@@ -72,11 +64,7 @@ export default function Avatar({
 
   const avatarColor = useMemo(() => {
     if (!color) {
-      const hash = getHashOfString(label);
-
-      const colorIndex = Math.floor(hash % 16);
-
-      return colors[colorIndex];
+      return hookColor;
     }
 
     return color === true ? 'accent' : color;

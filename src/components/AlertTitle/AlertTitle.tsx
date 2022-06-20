@@ -1,6 +1,12 @@
 import React, { ReactNode } from 'react';
 
+import clsx from 'clsx';
+
 export interface AlertTitleProps {
+  /**
+   * Custom classes for the dialog
+   */
+  className?: string;
   /**
    * AlertTitle contents.
    */
@@ -12,11 +18,15 @@ export interface AlertTitleProps {
  */
 export function AlertTitle({
   children,
+  className,
   ...props
 }: AlertTitleProps) {
   return (
     <h4
-      className="alert-title"
+    className={clsx(
+      'alert-title',
+      className
+    )}
       {...props}
     >
       {children}

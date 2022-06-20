@@ -12,6 +12,10 @@ export interface AlertProps {
    */
   color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
   /**
+   * Custom classes for the dialog
+   */
+  className?: string;
+  /**
    * Alert contents.
    */
   children: ReactNode;
@@ -23,6 +27,7 @@ export interface AlertProps {
 export function Alert({
   color,
   children,
+  className,
   ...props
 }: AlertProps) {
   return (
@@ -30,7 +35,8 @@ export function Alert({
       role="alert"
       className={clsx(
         'alert',
-        color
+        color,
+        className
       )}
       {...props}
     >

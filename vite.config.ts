@@ -21,6 +21,9 @@ export default defineConfig({
     }
   },
   plugins: [react(), dts()],
+  esbuild: {
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
+  },
   resolve: {
     alias: {
       '@docs': path.resolve(__dirname, './src/docs'),

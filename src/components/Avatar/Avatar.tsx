@@ -25,6 +25,10 @@ export interface AvatarProps {
    */
   size?: 'sm' | 'md' | 'lg';
   /**
+   * Enable border.
+   */
+  border?: boolean;
+  /**
    * Disable initials.
    */
   disableInitials?: boolean;
@@ -47,6 +51,7 @@ export default function Avatar({
   variant = 'default',
   size = 'md',
   color,
+  border,
   disableInitials,
   className,
   ...props
@@ -77,6 +82,7 @@ export default function Avatar({
         {
           [`avatar-${variant}`]: variant === 'plated',
           [`avatar-${size}`]: size !== 'md',
+          [`avatar-border`]: border,
           [`${avatarColor}`]: avatarColor
         },
         className

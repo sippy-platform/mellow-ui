@@ -18,7 +18,8 @@
     "outDir": "dist",
     "paths": {
       "@docs/*": ["./src/docs/*"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@hooks/*": ["./src/hooks/*"]
     }
   },
   "include": ["src/components"],

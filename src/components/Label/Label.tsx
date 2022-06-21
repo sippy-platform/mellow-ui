@@ -6,7 +6,7 @@ export interface LabelProps {
   /**
    * The variant of the button.
    */
-  variant?: 'default' | 'plated' | 'solid';
+  variant?: 'default' | 'outlined' | 'solid';
   /**
    * The color of the button, only works when the variant is `color` or `hover`
    */

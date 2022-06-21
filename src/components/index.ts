@@ -143,3 +143,5 @@ export type { SelectItemProps } from './SelectItem';
 
 export { default as SelectLabel } from './SelectLabel';
 export type { SelectLabelProps } from './SelectLabel';
+
+export { default as useColor } from '@hooks/useColor';

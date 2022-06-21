@@ -21,10 +21,14 @@ export default defineConfig({
     }
   },
   plugins: [react(), dts()],
+  esbuild: {
+    logOverride: { 'this-is-undefined-in-esm': 'silent' }
+  },
   resolve: {
     alias: {
       '@docs': path.resolve(__dirname, './src/docs'),
       '@components': path.resolve(__dirname, './src/components'),
+      '@hooks': path.resolve(__dirname, './src/hooks'),
     },
   }
 })

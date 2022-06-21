@@ -40,6 +40,10 @@ export interface ListItemProps {
    */
   endIcon?: ReactNode;
   /**
+   * Truncate the label
+   */
+  truncate?: boolean;
+  /**
    * Start action
    */
   startAction?: ReactNode;
@@ -74,6 +78,7 @@ export const ListItem = ({
   startAction,
   endAction,
   as,
+  truncate,
   ...props
 }: ListItemProps) => {
   const Component = useMemo(() => (as ? as : ((startAction || endAction) ? 'label' : (href ? 'a' : (onClick ? 'button' : 'li')))), [as, href, onClick, startAction, endAction]);
@@ -98,7 +103,7 @@ export const ListItem = ({
     >
       {startAction && <span className="list-item-action-s">{startAction}</span>}
       {startIcon && <span className="list-item-icon-s">{startIcon}</span>}
-      {primary && <span className="list-item-label">{primary}</span>}
+      {primary && <span className={clsx('list-item-label', { 'text-truncate': truncate })}>{primary}</span>}
       {endIcon && <span className="list-item-icon-e">{endIcon}</span>}
       {endAction && <span className="list-item-action-e">{endAction}</span>}
     </Component>

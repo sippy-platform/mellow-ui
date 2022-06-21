@@ -1,4 +1,5 @@
 import { ReactNode, useMemo } from 'react';
+import useColor from '@hooks/useColor';
 
 import clsx from 'clsx';
 
@@ -14,7 +15,7 @@ export interface AvatarProps {
   /**
    * The variant of the avatar.
    */
-  variant?: 'default' | 'plated';
+  variant?: 'default' | 'solid';
   /**
    * The color of the avatar, only works when the variant is `color` or `hover`
    */
@@ -23,6 +24,10 @@ export interface AvatarProps {
    * The avatar size.
    */
   size?: 'sm' | 'md' | 'lg';
+  /**
+   * Enable border.
+   */
+  border?: boolean;
   /**
    * Disable initials.
    */
@@ -46,20 +51,12 @@ export default function Avatar({
   variant = 'default',
   size = 'md',
   color,
+  border,
   disableInitials,
   className,
   ...props
 }: AvatarProps) {
-  const colors = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'teal', 'cyan', 'blue', 'indigo', 'violet', 'purple', 'pink', 'rose', 'brown', 'grey'];
-
-  const getHashOfString = (str: string) => {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-      hash = str.charCodeAt(i) + ((hash << 5) - hash);
-    }
-    hash = Math.abs(hash);
-    return hash;
-  };
+  const hookColor = useColor(label);
 
   const avatarLabel = useMemo(() => {
     if (disableInitials) {
@@ -72,11 +69,7 @@ export default function Avatar({
 
   const avatarColor = useMemo(() => {
     if (!color) {
-      const hash = getHashOfString(label);
-
-      const colorIndex = Math.floor(hash % 16);
-
-      return colors[colorIndex];
+      return hookColor;
     }
 
     return color === true ? 'accent' : color;
@@ -87,8 +80,9 @@ export default function Avatar({
       className={clsx(
         'avatar',
         {
-          [`avatar-${variant}`]: variant === 'plated',
+          [`avatar-${variant}`]: variant === 'solid',
           [`avatar-${size}`]: size !== 'md',
+          [`avatar-border`]: border,
           [`${avatarColor}`]: avatarColor
         },
         className

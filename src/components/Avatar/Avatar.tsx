@@ -15,7 +15,7 @@ export interface AvatarProps {
   /**
    * The variant of the avatar.
    */
-  variant?: 'default' | 'plated';
+  variant?: 'default' | 'solid';
   /**
    * The color of the avatar, only works when the variant is `color` or `hover`
    */
@@ -80,7 +80,7 @@ export default function Avatar({
       className={clsx(
         'avatar',
         {
-          [`avatar-${variant}`]: variant === 'plated',
+          [`avatar-${variant}`]: variant === 'solid',
           [`avatar-${size}`]: size !== 'md',
           [`avatar-border`]: border,
           [`${avatarColor}`]: avatarColor

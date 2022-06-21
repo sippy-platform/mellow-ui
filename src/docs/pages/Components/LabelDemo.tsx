@@ -33,59 +33,59 @@ export default function LabelDemo() {
           <Label color="accent">Accent</Label>
         </div>
       </DemoBox>
-      <h3>Plated</h3>
-      <p>Set the variant to plated to make them appear softer.</p>
+      <h3>Outlined</h3>
+      <p>Set the variant to outlined to make them appear with a transparent background and a solid border color.</p>
       <DemoBox>
         <div>
-          <Label variant="plated" color="red">
+          <Label variant="outlined" color="red">
             Red
           </Label>
-          <Label variant="plated" color="orange">
+          <Label variant="outlined" color="orange">
             Orange
           </Label>
-          <Label variant="plated" color="amber">
+          <Label variant="outlined" color="amber">
             Amber
           </Label>
-          <Label variant="plated" color="yellow">
+          <Label variant="outlined" color="yellow">
             Yellow
           </Label>
-          <Label variant="plated" color="lime">
+          <Label variant="outlined" color="lime">
             Lime
           </Label>
-          <Label variant="plated" color="green">
+          <Label variant="outlined" color="green">
             Green
           </Label>
-          <Label variant="plated" color="teal">
+          <Label variant="outlined" color="teal">
             Teal
           </Label>
-          <Label variant="plated" color="cyan">
+          <Label variant="outlined" color="cyan">
             Cyan
           </Label>
-          <Label variant="plated" color="blue">
+          <Label variant="outlined" color="blue">
             Blue
           </Label>
-          <Label variant="plated" color="indigo">
+          <Label variant="outlined" color="indigo">
             Indigo
           </Label>
-          <Label variant="plated" color="violet">
+          <Label variant="outlined" color="violet">
             Violet
           </Label>
-          <Label variant="plated" color="purple">
+          <Label variant="outlined" color="purple">
             Purple
           </Label>
-          <Label variant="plated" color="pink">
+          <Label variant="outlined" color="pink">
             Pink
           </Label>
-          <Label variant="plated" color="rose">
+          <Label variant="outlined" color="rose">
             Rose
           </Label>
-          <Label variant="plated" color="brown">
+          <Label variant="outlined" color="brown">
             Brown
           </Label>
-          <Label variant="plated" color="grey">
+          <Label variant="outlined" color="grey">
             Grey
           </Label>
-          <Label variant="plated" color="accent">
+          <Label variant="outlined" color="accent">
             Accent
           </Label>
         </div>

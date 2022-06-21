@@ -79,27 +79,27 @@ export default function AvatarDemo() {
           <Avatar size="lg" label="LG" />
         </div>
       </DemoBox>
-      <h3>Plated</h3>
-      <p>Set the variant to plated to make them appear softer.</p>
+      <h3>Solid</h3>
+      <p>Set the variant to solid to make avatars use the base colors from our color palette.</p>
       <DemoBox>
         <div>
-          <Avatar variant="plated" color="red" label="RD" />
-          <Avatar variant="plated" color="orange" label="OE" />
-          <Avatar variant="plated" color="amber" label="AR" />
-          <Avatar variant="plated" color="yellow" label="YW" />
-          <Avatar variant="plated" color="lime" label="LE" />
-          <Avatar variant="plated" color="green" label="GN" />
-          <Avatar variant="plated" color="teal" label="TL" />
-          <Avatar variant="plated" color="cyan" label="CN" />
-          <Avatar variant="plated" color="blue" label="BE" />
-          <Avatar variant="plated" color="indigo" label="IO" />
-          <Avatar variant="plated" color="violet" label="VT" />
-          <Avatar variant="plated" color="purple" label="PE" />
-          <Avatar variant="plated" color="pink" label="PK" />
-          <Avatar variant="plated" color="rose" label="RE" />
-          <Avatar variant="plated" color="brown" label="BN" />
-          <Avatar variant="plated" color="grey" label="GY" />
-          <Avatar variant="plated" color="accent" label="AT" />
+          <Avatar variant="solid" color="red" label="RD" />
+          <Avatar variant="solid" color="orange" label="OE" />
+          <Avatar variant="solid" color="amber" label="AR" />
+          <Avatar variant="solid" color="yellow" label="YW" />
+          <Avatar variant="solid" color="lime" label="LE" />
+          <Avatar variant="solid" color="green" label="GN" />
+          <Avatar variant="solid" color="teal" label="TL" />
+          <Avatar variant="solid" color="cyan" label="CN" />
+          <Avatar variant="solid" color="blue" label="BE" />
+          <Avatar variant="solid" color="indigo" label="IO" />
+          <Avatar variant="solid" color="violet" label="VT" />
+          <Avatar variant="solid" color="purple" label="PE" />
+          <Avatar variant="solid" color="pink" label="PK" />
+          <Avatar variant="solid" color="rose" label="RE" />
+          <Avatar variant="solid" color="brown" label="BN" />
+          <Avatar variant="solid" color="grey" label="GY" />
+          <Avatar variant="solid" color="accent" label="AT" />
         </div>
       </DemoBox>
       <h3>Icon</h3>

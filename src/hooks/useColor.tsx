@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 type MellowColor = 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey';
 
-export default function useColor(string: string): { color: MellowColor, supplement: MellowColor } {
+export default function useColor(string: string): MellowColor {
   const colors: MellowColor[] = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'teal', 'cyan', 'blue', 'indigo', 'violet', 'purple', 'pink', 'rose', 'brown', 'grey'];
 
   const getHashOfString = (str: string) => {
@@ -14,13 +14,13 @@ export default function useColor(string: string): { color: MellowColor, suppleme
     return hash;
   };
 
-  const [color, supplement] = useMemo(() => {
+  const color = useMemo(() => {
     const hash = getHashOfString(string);
 
     const colorIndex = Math.floor(hash % 16);
 
-    return [colors[colorIndex], colors[colorIndex === 0 ? 16 : colorIndex - 1]];
+    return colors[colorIndex];
   }, []);
 
-  return { color, supplement };
+  return color;
 }

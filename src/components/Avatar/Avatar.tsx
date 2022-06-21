@@ -56,7 +56,7 @@ export default function Avatar({
   className,
   ...props
 }: AvatarProps) {
-  const { color: hookColor } = useColor(label);
+  const hookColor = useColor(label);
 
   const avatarLabel = useMemo(() => {
     if (disableInitials) {

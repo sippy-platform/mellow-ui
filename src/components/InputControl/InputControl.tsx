@@ -21,7 +21,7 @@ export interface InputControlProps {
   /**
    * The helper text
    */
-  helper: string;
+  helper?: string;
   /**
    * Placeholder of the input
    */

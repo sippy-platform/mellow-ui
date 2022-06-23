@@ -24,7 +24,7 @@ export interface SelectControlProps {
   /**
    * The helper text
    */
-  helper: string;
+  helper?: string;
   /**
    * The placeholder for the select
    */

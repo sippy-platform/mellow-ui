@@ -1,7 +1,8 @@
-import { ChangeEventHandler } from 'react';
-import { InputLabel, InputLabelProps, Input, InputProps } from '..';
+import clsx from 'clsx';
+import { InputHTMLAttributes } from 'react';
+import { InputLabel } from '..';
 
-export interface InputControlProps {
+export interface InputControlProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
    * ID of the input
    */
@@ -27,29 +28,13 @@ export interface InputControlProps {
    */
   placeholder?: string;
   /**
-   * Props for the label
+   * Type of the input
    */
-  labelProps?: InputLabelProps;
-  /**
-   * Props for the label
-   */
-  onChange?: ChangeEventHandler<HTMLInputElement>;
-  /**
-   * Props for the input
-   */
-  inputProps?: InputProps;
-  /**
-   * Make the field required
-   */
-  required?: boolean;
+  type?: string;
   /**
    * Custom classes for the label
    */
   className?: string;
-  /**
-   * Type of the input
-   */
-  type?: string;
 }
 
 /**
@@ -62,31 +47,28 @@ export const InputControl = ({
   className,
   value,
   type,
-  inputProps,
-  labelProps,
   placeholder,
-  required,
   helper,
-  onChange,
   ...props
 }: InputControlProps) => {
   const uniqueName = name ?? id;
 
   return (
     <div className="form-floating">
-      <Input
+      <input
         name={uniqueName}
         id={id}
         type={type}
         value={value}
+        className={clsx(
+          'input',
+          className
+        )}
         placeholder={placeholder}
-        onChange={onChange}
         aria-describedby={helper ? `${uniqueName}-help` : undefined}
-        required={required}
-        {...inputProps}
         {...props}
       />
-      <InputLabel id={name} {...labelProps}>{label}</InputLabel>
+      <InputLabel id={uniqueName}>{label}</InputLabel>
       {helper && <div id={`${uniqueName}-help`} className="input-text">{helper}</div>}
     </div>
   );

@@ -1,6 +1,6 @@
-import React, { FormEventHandler, ReactNode, Fragment, useMemo } from 'react';
+import React, { ReactNode, Fragment, useMemo } from 'react';
 
-import { InputLabel, InputLabelProps } from '..';
+import { InputLabel } from '..';
 
 import { Listbox, Transition } from '@headlessui/react';
 
@@ -58,10 +58,6 @@ export interface SelectControlProps {
    */
   floating?: boolean;
   /**
-   * Props for the label
-   */
-  labelProps?: InputLabelProps;
-  /**
    * Custom classes for the label
    */
   className?: string;
@@ -86,7 +82,6 @@ export const SelectControl = ({
   getValue = (x) => x.value,
   disabled,
   floating = false,
-  labelProps,
   label,
   helper,
   ...props
@@ -121,7 +116,7 @@ export const SelectControl = ({
           </Listbox.Options>
         </Transition>
       </Listbox>
-      <InputLabel id={name} shrink={!!value} {...labelProps}>{label}</InputLabel>
+      <InputLabel id={uniqueName} shrink={!!value}>{label}</InputLabel>
       {helper && <div id={`${uniqueName}-help`} className="input-text">{helper}</div>}
     </div>
   );

@@ -61,8 +61,8 @@ export type { DialogBodyProps } from '@components/DialogBody';
 export { default as DialogHeader } from '@components/DialogHeader';
 export type { DialogHeaderProps } from '@components/DialogHeader';
 
-export { default as FormControl } from '@components/FormControl';
-export type { FormControlProps } from '@components/FormControl';
+export { default as InputControl } from '@components/InputControl';
+export type { InputControlProps } from '@components/InputControl';
 
 export { default as Grid } from '@components/Grid';
 export type { GridProps } from '@components/Grid';
@@ -138,6 +138,9 @@ export type { RangeProps } from '@components/Range';
 
 export { default as Select } from '@components/Select';
 export type { SelectProps } from '@components/Select';
+
+export { default as SelectControl } from '@components/SelectControl';
+export type { SelectControlProps } from '@components/SelectControl';
 
 export { default as SelectDivider } from '@components/SelectDivider';
 

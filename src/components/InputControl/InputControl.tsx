@@ -1,7 +1,7 @@
 import { ChangeEventHandler } from 'react';
 import { InputLabel, InputLabelProps, Input, InputProps } from '..';
 
-export interface FormControlProps {
+export interface InputControlProps {
   /**
    * ID of the input
    */
@@ -51,7 +51,7 @@ export interface FormControlProps {
 /**
  * Primary UI component for user interaction
  */
-export const FormControl = ({
+export const InputControl = ({
   id,
   label,
   name,
@@ -64,7 +64,7 @@ export const FormControl = ({
   helper,
   onChange,
   ...props
-}: FormControlProps) => {
+}: InputControlProps) => {
   const uniqueName = name ?? id;
 
   return (
@@ -76,7 +76,7 @@ export const FormControl = ({
         value={value}
         placeholder={placeholder}
         onChange={onChange}
-        aria-describedBy={helper ? `${uniqueName}-help` : undefined}
+        aria-describedby={helper ? `${uniqueName}-help` : undefined}
         {...inputProps}
         {...props}
       />
@@ -86,4 +86,4 @@ export const FormControl = ({
   );
 };
 
-export default FormControl;
+export default InputControl;

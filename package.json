@@ -1,6 +1,6 @@
 {
   "name": "@sippy-platform/mellow-ui",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "React components for the Mellow Design System.",
   "main": "./dist/mellow-ui.umd.js",
   "module": "./dist/mellow-ui.es.js",

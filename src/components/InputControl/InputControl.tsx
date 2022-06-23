@@ -39,6 +39,10 @@ export interface InputControlProps {
    */
   inputProps?: InputProps;
   /**
+   * Make the field required
+   */
+  required?: boolean;
+  /**
    * Custom classes for the label
    */
   className?: string;
@@ -61,6 +65,7 @@ export const InputControl = ({
   inputProps,
   labelProps,
   placeholder,
+  required,
   helper,
   onChange,
   ...props
@@ -77,6 +82,7 @@ export const InputControl = ({
         placeholder={placeholder}
         onChange={onChange}
         aria-describedby={helper ? `${uniqueName}-help` : undefined}
+        required={required}
         {...inputProps}
         {...props}
       />

@@ -61,6 +61,9 @@ export type { DialogBodyProps } from '@components/DialogBody';
 export { default as DialogHeader } from '@components/DialogHeader';
 export type { DialogHeaderProps } from '@components/DialogHeader';
 
+export { default as FormControl } from '@components/FormControl';
+export type { FormControlProps } from '@components/FormControl';
+
 export { default as Grid } from '@components/Grid';
 export type { GridProps } from '@components/Grid';
 

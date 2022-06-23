@@ -13,6 +13,7 @@ import CardDemo from './pages/Components/CardDemo';
 import CheckboxDemo from './pages/Forms/CheckboxDemo';
 import ContainerDemo from './pages/Layout/ContainerDemo';
 import DialogDemo from './pages/Components/DialogDemo';
+import FormControlDemo from './pages/Forms/FormControlDemo';
 import GridDemo from './pages/Layout/GridDemo';
 import InputDemo from './pages/Forms/InputDemo';
 import InputLabelDemo from './pages/Forms/InputLabelDemo';
@@ -41,6 +42,7 @@ function App() {
         <Route path="/checkbox" element={<CheckboxDemo />} />
         <Route path="/container" element={<ContainerDemo />} />
         <Route path="/dialog" element={<DialogDemo />} />
+        <Route path="/formcontrol" element={<FormControlDemo />} />
         <Route path="/grid" element={<GridDemo />} />
         <Route path="/input" element={<InputDemo />} />
         <Route path="/inputlabel" element={<InputLabelDemo />} />

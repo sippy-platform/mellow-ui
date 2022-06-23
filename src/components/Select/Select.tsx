@@ -78,7 +78,7 @@ export const Select = ({
     <div className="position-relative">
       <Listbox value={value} onChange={onChange} disabled={disabled} name={uniqueName}>
         <Listbox.Button className={clsx('input-select', className)} {...props}>
-          <span className="text-truncate">{getLabel(currentValue) || <span className="placeholder">{placeholder}</span>}</span>
+          <span className="text-truncate">{getLabel(currentValue) || <span className="select-placeholder">{placeholder}</span>}</span>
           <span className="d-flex align-items-center">
             <ValkyrieIcon icon={viAngleDown} />
           </span>

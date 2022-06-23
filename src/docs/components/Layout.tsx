@@ -38,6 +38,7 @@ export default function Layout({ children }) {
             <ListItem primary="Radio" onClick={() => navigate('/radio')} />
             <ListItem primary="Range" onClick={() => navigate('/range')} />
             <ListItem primary="Select" onClick={() => navigate('/select')} />
+            <ListItem primary="Form Control" onClick={() => navigate('/formcontrol')} />
             <p className="h6 mb-2 mt-3 ms-3">Components</p>
             <ListItem primary="Alert" onClick={() => navigate('/alert')} />
             <ListItem primary="Avatar" onClick={() => navigate('/avatar')} />

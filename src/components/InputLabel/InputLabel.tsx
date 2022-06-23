@@ -4,6 +4,10 @@ import clsx from 'clsx';
 
 export interface InputLabelProps {
   /**
+   * Whether the label should shrink
+   */
+  shrink?: boolean;
+  /**
    * The id of the element this label is attached to
    */
   id?: string;
@@ -21,12 +25,13 @@ export interface InputLabelProps {
  * Primary UI component for user interaction
  */
 export const InputLabel = ({
+  shrink,
   className,
   children,
   id
 }: InputLabelProps) => {
   return (
-    <label className={clsx('input-label', className)} htmlFor={id} id={`${id}-label`}>
+    <label className={clsx('input-label', { 'input-label-shrink': shrink }, className)} htmlFor={id} id={`${id}-label`}>
       {children}
     </label>
   );

@@ -149,5 +149,3 @@ export type { SelectItemProps } from '@components/SelectItem';
 
 export { default as SelectLabel } from '@components/SelectLabel';
 export type { SelectLabelProps } from '@components/SelectLabel';
-
-export { default as useColor } from '@hooks/useColor';

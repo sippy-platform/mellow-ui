@@ -1,12 +1,14 @@
 import React, { FormEventHandler, ReactNode, Fragment, useMemo } from 'react';
 
+import { InputLabel, InputLabelProps } from '..';
+
 import { Listbox, Transition } from '@headlessui/react';
 
 import clsx from 'clsx';
 import ValkyrieIcon, { viAngleDown } from '@sippy-platform/valkyrie';
 import SelectItem from '../SelectItem';
 
-export interface SelectProps {
+export interface SelectControlProps {
   /**
    * ID of the input
    */
@@ -15,6 +17,14 @@ export interface SelectProps {
    * The name attached of the select
    */
   name?: string;
+  /**
+   * Label of the input
+   */
+  label: string;
+  /**
+   * The helper text
+   */
+  helper: string;
   /**
    * The placeholder for the select
    */
@@ -44,6 +54,14 @@ export interface SelectProps {
    */
   disabled?: boolean;
   /**
+   * Is being used with a floating label
+   */
+  floating?: boolean;
+  /**
+   * Props for the label
+   */
+  labelProps?: InputLabelProps;
+  /**
    * Custom classes for the label
    */
   className?: string;
@@ -56,7 +74,7 @@ export interface SelectProps {
 /**
  * Primary UI component for user interaction
  */
-export const Select = ({
+export const SelectControl = ({
   id,
   name,
   placeholder,
@@ -67,18 +85,22 @@ export const Select = ({
   getLabel = (x) => x.label,
   getValue = (x) => x.value,
   disabled,
+  floating = false,
+  labelProps,
+  label,
+  helper,
   ...props
-}: SelectProps) => {
+}: SelectControlProps) => {
   const uniqueName = name ?? id;
   const currentValue = useMemo(() => {
     return options.find((option) => getValue(option) === value);
   }, [options, value]);
 
   return (
-    <div className="position-relative">
+    <div className="form-floating">
       <Listbox value={value} onChange={onChange} disabled={disabled} name={uniqueName}>
         <Listbox.Button className={clsx('input-select', className)} {...props}>
-          <span className="text-truncate">{getLabel(currentValue) || <span className="select-placeholder">{placeholder}</span>}</span>
+          <span className="text-truncate pt-3 pb-1">{currentValue ? getLabel(currentValue) : <span className="select-placeholder">{placeholder}</span>}</span>
           <span className="d-flex align-items-center">
             <ValkyrieIcon icon={viAngleDown} />
           </span>
@@ -99,8 +121,10 @@ export const Select = ({
           </Listbox.Options>
         </Transition>
       </Listbox>
+      <InputLabel id={name} shrink={!!value} {...labelProps}>{label}</InputLabel>
+      {helper && <div id={`${uniqueName}-help`} className="input-text">{helper}</div>}
     </div>
   );
 };
 
-export default Select;
+export default SelectControl;

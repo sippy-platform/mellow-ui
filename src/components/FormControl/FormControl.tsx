@@ -1,3 +1,4 @@
+import { ChangeEventHandler } from 'react';
 import { InputLabel, InputLabelProps, Input, InputProps } from '..';
 
 export interface FormControlProps {
@@ -30,6 +31,10 @@ export interface FormControlProps {
    */
   labelProps?: InputLabelProps;
   /**
+   * Props for the label
+   */
+  onChange?: ChangeEventHandler<HTMLInputElement>;
+  /**
    * Props for the input
    */
   inputProps?: InputProps;
@@ -57,6 +62,7 @@ export const FormControl = ({
   labelProps,
   placeholder,
   helper,
+  onChange,
   ...props
 }: FormControlProps) => {
   const uniqueName = name ?? id;
@@ -69,6 +75,7 @@ export const FormControl = ({
         type={type}
         value={value}
         placeholder={placeholder}
+        onChange={onChange}
         aria-describedBy={helper ? `${uniqueName}-help` : undefined}
         {...inputProps}
         {...props}

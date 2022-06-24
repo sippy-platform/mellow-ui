@@ -48,7 +48,7 @@ export interface SelectControlProps {
   /**
    * The callback for getting the option label
    */
-  getValue?: (value: any) => string | number;
+  getValue?: (value: any) => string;
   /**
    * Whether the radio group is disabled
    */

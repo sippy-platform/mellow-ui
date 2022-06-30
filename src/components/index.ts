@@ -100,6 +100,12 @@ export type { MenuItemsProps } from '@components/MenuItems';
 export { default as MenuTrigger } from '@components/MenuTrigger';
 export type { MenuTriggerProps } from '@components/MenuTrigger';
 
+export { default as Nav } from '@components/Nav';
+export type { NavProps } from '@components/Nav';
+
+export { default as NavItem } from '@components/NavItem';
+export type { NavItemProps } from '@components/NavItem';
+
 export { default as Offcanvas } from '@components/Offcanvas';
 export type { OffcanvasProps } from '@components/Offcanvas';
 

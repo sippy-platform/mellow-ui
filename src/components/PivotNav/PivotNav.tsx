@@ -5,10 +5,6 @@ import clsx from 'clsx';
 
 export interface PivotNavProps {
   /**
-   * The array of options
-   */
-  variant?: 'default' | 'underline' | 'pills';
-  /**
    * Custom classes for the label
    */
   className?: string;
@@ -23,7 +19,6 @@ export interface PivotNavProps {
  */
 export const PivotNav = ({
   className,
-  variant = 'default',
   children
 }: PivotNavProps) => {
   return (
@@ -31,9 +26,6 @@ export const PivotNav = ({
       className={
         clsx(
           'pivot',
-          {
-            [`pivot-${variant}`]: variant !== 'default'
-          },
           className
         )
       }

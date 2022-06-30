@@ -126,6 +126,8 @@
 }
 
 .docs-sidebar {
+  overflow: auto;
+
   @media (min-width: 800px) {
     grid-area: sidebar;
     position: sticky;

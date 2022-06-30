@@ -32,7 +32,7 @@ export interface SelectControlProps {
   /**
    * Value of the select
    */
-  value?: string | number;
+  value?: any;
   /**
    * The array of options
    */
@@ -40,7 +40,7 @@ export interface SelectControlProps {
   /**
    * The callback for changing values
    */
-  onChange: (value: string | number | null) => void;
+  onChange: (value: any | null) => void;
   /**
    * The callback for getting the option label
    */
@@ -48,7 +48,7 @@ export interface SelectControlProps {
   /**
    * The callback for getting the option label
    */
-  getValue?: (value: any) => string;
+  getValue?: (value: any) => any;
   /**
    * Whether the radio group is disabled
    */

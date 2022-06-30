@@ -1,10 +1,14 @@
-import React, { ReactNode } from 'react';
+import { ElementType, ReactNode } from 'react';
 
 import clsx from 'clsx';
 
 export interface NavItemProps {
   /**
-   * Custom classes for the label
+   * The type of the element
+   */
+  as?: ElementType;
+  /**
+   * Whether the element is active
    */
   active?: boolean;
   /**
@@ -21,24 +25,27 @@ export interface NavItemProps {
  * Primary UI component for user interaction
  */
 export const NavItem = ({
+  as = 'button',
   className,
   active,
-  children
+  children,
+  ...props
 }: NavItemProps) => {
+  const Component = as;
+
   return (
-    <>
-      <button
-        className={clsx(
-          'pivot-link',
-          {
-            'active': active
-          },
-          className
-        )}
-      >
-        {children}
-      </button>
-    </>
+    <Component
+      className={clsx(
+        'pivot-link',
+        {
+          'active': active
+        },
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </Component>
   );
 };
 

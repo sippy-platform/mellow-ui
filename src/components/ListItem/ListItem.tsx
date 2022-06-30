@@ -58,7 +58,7 @@ export interface ListItemProps {
   /**
    * As what the component should be rendered
    */
-  as?: string | ElementType;
+  as?: ElementType;
 }
 
 /**

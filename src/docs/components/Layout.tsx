@@ -50,6 +50,7 @@ export default function Layout({ children }) {
             <ListItem primary="Label" onClick={() => navigate('/label')} />
             <ListItem primary="List" onClick={() => navigate('/list')} />
             <ListItem primary="Menu" onClick={() => navigate('/menu')} />
+            <ListItem primary="Nav" onClick={() => navigate('/nav')} />
             <ListItem primary="Offcanvas" onClick={() => navigate('/offcanvas')} />
             <ListItem primary="Pivot" onClick={() => navigate('/pivot')} />
             <ListItem primary="Progress" onClick={() => navigate('/progress')} />

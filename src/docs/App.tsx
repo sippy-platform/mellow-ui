@@ -22,6 +22,7 @@ import LabelDemo from './pages/Components/LabelDemo';
 import Layout from './components/Layout';
 import ListDemo from './pages/Components/ListDemo';
 import MenuDemo from './pages/Components/MenuDemo';
+import NavDemo from './pages/Components/NavDemo';
 import OffcanvasDemo from './pages/Components/OffcanvasDemo';
 import PivotDemo from './pages/Components/PivotDemo';
 import ProgressDemo from './pages/Components/ProgressDemo';
@@ -50,6 +51,7 @@ function App() {
         <Route path="/label" element={<LabelDemo />} />
         <Route path="/list" element={<ListDemo />} />
         <Route path="/menu" element={<MenuDemo />} />
+        <Route path="/nav" element={<NavDemo />} />
         <Route path="/offcanvas" element={<OffcanvasDemo />} />
         <Route path="/pivot" element={<PivotDemo />} />
         <Route path="/progress" element={<ProgressDemo />} />

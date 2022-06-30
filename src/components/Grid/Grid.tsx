@@ -1,4 +1,4 @@
-import { ElementType, ReactNode, useMemo } from 'react';
+import { ComponentPropsWithoutRef, ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
@@ -8,7 +8,7 @@ interface BreakpointConfig {
   [key: string]: GridDefinition | undefined
 }
 
-export interface GridProps {
+export type GridProps<T extends ElementType> = {
   /**
    * Grid doubles as container
    */
@@ -44,17 +44,17 @@ export interface GridProps {
   /**
    * As what the component should be rendered
    */
-  as?: string | ElementType;
+  as?: T;
   /**
    * Children
    */
   children?: ReactNode;
-}
+} & ComponentPropsWithoutRef<T>;
 
 /**
  * Primary UI component for user interaction
  */
-export function Grid({
+export function Grid<T extends ElementType>({
   container,
   xs = { grid: 12, gap: 3 },
   sm,
@@ -62,10 +62,10 @@ export function Grid({
   lg,
   xl,
   ul,
-  as = 'div',
+  as,
   className,
   ...props
-}: GridProps) {
+}: GridProps<T>) {
   const gridClasses = useMemo(() => {
     const grids: string[] = [];
     const gaps: string[] = [];

@@ -1,10 +1,10 @@
-import { ElementType, ButtonHTMLAttributes, ReactNode, useMemo } from 'react';
+import { ElementType, ButtonHTMLAttributes, ReactNode, useMemo, ComponentPropsWithoutRef } from 'react';
 
 import { Menu as MenuPrimitive } from '@headlessui/react';
 
 import clsx from 'clsx';
 
-export interface MenuItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface IMenuItemProps<T> extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Active menu item
    */
@@ -35,10 +35,12 @@ export interface MenuItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
 }
 
+export type MenuItemProps<T extends ElementType> = IMenuItemProps<T> & ComponentPropsWithoutRef<T>;
+
 /**
  * Primary UI component for user interaction
  */
-export const MenuItem = ({
+export function MenuItem<T extends ElementType>({
   children,
   className,
   disabled,
@@ -47,7 +49,7 @@ export const MenuItem = ({
   as,
   active: forcedActive,
   ...props
-}: MenuItemProps) => {
+}: MenuItemProps<T>) {
   const Component = useMemo(() => (as ? as : (href ? 'a' : 'button')) as ElementType, [as, href]);
 
   return (

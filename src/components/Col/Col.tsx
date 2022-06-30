@@ -1,4 +1,4 @@
-import { ElementType, ReactNode, useMemo } from 'react';
+import { ReactNode, useMemo, ElementType, ComponentPropsWithoutRef } from 'react';
 
 import clsx from 'clsx';
 
@@ -10,7 +10,7 @@ interface BreakpointConfig {
   [key: string]: ColDefinition | undefined
 }
 
-export interface ColProps {
+export type ColProps<T extends ElementType> = {
   /**
    * Column definition on the xs breakpoint
    */
@@ -42,27 +42,27 @@ export interface ColProps {
   /**
    * As what the component should be rendered
    */
-  as?: string | ElementType;
+  as?: T;
   /**
    * Children
    */
   children?: ReactNode;
-}
+} & ComponentPropsWithoutRef<T>;
 
 /**
  * Primary UI component for user interaction
  */
-export const Col = ({
+export function Col<T extends ElementType>({
   xs = 1,
   sm,
   md,
   lg,
   xl,
   ul,
-  as = 'div',
+  as,
   className,
   ...props
-}: ColProps) => {
+}: ColProps<T>) {
   const gridClasses = useMemo(() => {
     const spans: string[] = [];
     const starts: string[] = [];

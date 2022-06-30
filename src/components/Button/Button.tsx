@@ -1,8 +1,8 @@
-import { ElementType, ButtonHTMLAttributes, ReactNode, useMemo } from 'react';
+import { ElementType, ButtonHTMLAttributes, ReactNode, useMemo, ComponentPropsWithoutRef } from 'react';
 
 import clsx from 'clsx';
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface IButtonProps<T> extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * The variant of the button.
    */
@@ -38,7 +38,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * As what the component should be rendered
    */
-  as?: ElementType;
+  as?: T;
   /**
    * Button contents.
    */
@@ -49,10 +49,12 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
 }
 
+export type ButtonProps<T extends ElementType> = IButtonProps<T> & ComponentPropsWithoutRef<T>;
+
 /**
  * Primary UI component for user interaction
  */
-export function Button({
+export function Button<T extends ElementType>({
   variant = 'default',
   size = 'md',
   color,
@@ -64,7 +66,7 @@ export function Button({
   className,
   as,
   ...props
-}: ButtonProps) {
+}: ButtonProps<T>) {
   const Component = useMemo(() => (as ? as : (href ? 'a' : 'button')) as ElementType, [as, href]);
 
   return (

@@ -1,12 +1,12 @@
-import { ElementType, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ElementType, ReactNode } from 'react';
 
 import clsx from 'clsx';
 
-export interface NavItemProps {
+export type NavItemProps<T extends ElementType> = {
   /**
    * The type of the element
    */
-  as?: ElementType;
+  as?: T;
   /**
    * Whether the element is active
    */
@@ -19,19 +19,19 @@ export interface NavItemProps {
    * The label attached to the label
    */
   children?: ReactNode;
-}
+} & ComponentPropsWithoutRef<T>;
 
 /**
  * Primary UI component for user interaction
  */
-export const NavItem = ({
-  as = 'button',
-  className,
+export function NavItem<T extends ElementType>({
+  as,
   active,
+  className,
   children,
   ...props
-}: NavItemProps) => {
-  const Component = as;
+}: NavItemProps<T>) {
+  const Component = as || 'button';
 
   return (
     <Component

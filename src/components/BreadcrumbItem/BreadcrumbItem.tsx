@@ -1,8 +1,8 @@
-import { ButtonHTMLAttributes, ElementType, ReactNode, useMemo } from 'react';
+import { ButtonHTMLAttributes, ComponentPropsWithoutRef, ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
-export interface BreadcrumbItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface IBreadcrumbItemProps<T> extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Bottom bar item activation state.
    */
@@ -22,17 +22,19 @@ export interface BreadcrumbItemProps extends ButtonHTMLAttributes<HTMLButtonElem
   /**
    * As what the component should be rendered
    */
-  as?: ElementType;
+  as?: T;
   /**
    * Bottom bar item contents.
    */
   children: ReactNode;
 }
 
+export type BreadcrumbItemProps<T extends ElementType> = IBreadcrumbItemProps<T> & ComponentPropsWithoutRef<T>;
+
 /**
  * Primary UI component for user interaction
  */
-export function BreadcrumbItem({
+export function BreadcrumbItem<T extends ElementType>({
   active,
   icon,
   children,
@@ -41,7 +43,7 @@ export function BreadcrumbItem({
   as,
   onClick,
   ...props
-}: BreadcrumbItemProps) {
+}: BreadcrumbItemProps<T>) {
   const Component = useMemo(() => (as ? as : (href ? 'a' : 'button')) as ElementType, [as, href]);
 
   return (

@@ -1,8 +1,8 @@
-import { ElementType, ReactNode, useMemo } from 'react';
+import { ComponentPropsWithoutRef, ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
-export interface ListItemProps {
+export type ListItemProps<T extends ElementType> = {
   /**
    * Show a label around the list
    */
@@ -58,13 +58,13 @@ export interface ListItemProps {
   /**
    * As what the component should be rendered
    */
-  as?: ElementType;
-}
+  as?: T;
+} & ComponentPropsWithoutRef<T>;
 
 /**
  * Primary UI component for user interaction
  */
-export const ListItem = ({
+export function ListItem<T extends ElementType>({
   active,
   primary,
   className,
@@ -80,7 +80,7 @@ export const ListItem = ({
   as,
   truncate,
   ...props
-}: ListItemProps) => {
+}: ListItemProps<T>) {
   const Component = useMemo(() => (as ? as : ((startAction || endAction) ? 'label' : (href ? 'a' : (onClick ? 'button' : 'li')))), [as, href, onClick, startAction, endAction]);
 
   return (

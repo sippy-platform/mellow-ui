@@ -1,8 +1,8 @@
-import { ButtonHTMLAttributes, ElementType, ReactNode, useMemo } from 'react';
+import { ButtonHTMLAttributes, ComponentPropsWithoutRef, ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
-export interface CardProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ICardProps<T> extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Custom function when clicking
    */
@@ -14,23 +14,25 @@ export interface CardProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * As what the component should be rendered
    */
-  as?: ElementType;
+  as?: T;
   /**
    * Card contents.
    */
   children: ReactNode;
 }
 
+export type CardProps<T extends ElementType> = ICardProps<T> & ComponentPropsWithoutRef<T>;
+
 /**
  * Primary UI component for user interaction
  */
-export function Card({
+export function Card<T extends ElementType>({
   className,
   children,
   as,
   onClick,
   ...props
-}: CardProps) {
+}: CardProps<T>) {
   const Component = useMemo(() => (as ? as : (onClick ? 'button' : 'div')) as ElementType, [as, onClick]);
 
   return (

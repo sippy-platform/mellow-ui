@@ -1,8 +1,8 @@
-import { ButtonHTMLAttributes, ElementType, ReactNode, useMemo } from 'react';
+import { ButtonHTMLAttributes, ComponentPropsWithoutRef, ElementType, ReactNode, useMemo } from 'react';
 
 import clsx from 'clsx';
 
-export interface BottomBarItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface IBottomBarItemProps<T> extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Bottom bar item activation state.
    */
@@ -22,17 +22,19 @@ export interface BottomBarItemProps extends ButtonHTMLAttributes<HTMLButtonEleme
   /**
    * As what the component should be rendered
    */
-  as?: ElementType;
+  as?: T;
   /**
    * Bottom bar item contents.
    */
   children: ReactNode;
-}
+};
+
+export type BottomBarItemProps<T extends ElementType> = IBottomBarItemProps<T> & ComponentPropsWithoutRef<T>;
 
 /**
  * Primary UI component for user interaction
  */
-export function BottomBarItem({
+export function BottomBarItem<T extends ElementType>({
   active,
   icon,
   children,
@@ -40,7 +42,7 @@ export function BottomBarItem({
   className,
   as,
   ...props
-}: BottomBarItemProps) {
+}: BottomBarItemProps<T>) {
   const Component = useMemo(() => (as ? as : (href ? 'a' : 'button')) as ElementType, [as, href]);
 
   return (

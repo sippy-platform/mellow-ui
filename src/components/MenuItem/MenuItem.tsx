@@ -20,7 +20,7 @@ export interface MenuItemProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * As what the component should be rendered
    */
-  as?: string | ElementType;
+  as?: ElementType;
   /**
    * Custom classes for active items
    */

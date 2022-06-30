@@ -95,7 +95,7 @@ export const SelectControl = ({
     <div className="form-floating">
       <Listbox value={value} onChange={onChange} disabled={disabled} name={uniqueName}>
         <Listbox.Button className={clsx('input-select', className)} {...props}>
-          <span className="text-truncate pt-3 pb-1">{currentValue ? getLabel(currentValue) : <span className="select-placeholder">{placeholder}</span>}</span>
+          <span className="text-truncate pt-4 pb-1">{currentValue ? getLabel(currentValue) : <span className="select-placeholder">{placeholder}</span>}</span>
           <span className="d-flex align-items-center">
             <ValkyrieIcon icon={viAngleDown} />
           </span>

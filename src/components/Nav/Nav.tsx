@@ -1,9 +1,8 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
-import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
 
-export interface PivotNavProps {
+export interface NavProps {
   /**
    * Custom classes for the label
    */
@@ -17,12 +16,12 @@ export interface PivotNavProps {
 /**
  * Primary UI component for user interaction
  */
-export const PivotNav = ({
+export const Nav = ({
   className,
   children
-}: PivotNavProps) => {
+}: NavProps) => {
   return (
-    <Tab.List
+    <nav
       className={
         clsx(
           'pivot',
@@ -31,8 +30,8 @@ export const PivotNav = ({
       }
     >
       {children}
-    </Tab.List>
+    </nav>
   );
 };
 
-export default PivotNav;
+export default Nav;

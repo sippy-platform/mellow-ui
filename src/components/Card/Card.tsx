@@ -14,7 +14,7 @@ export interface CardProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * As what the component should be rendered
    */
-  as?: string | ElementType;
+  as?: ElementType;
   /**
    * Card contents.
    */

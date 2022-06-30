@@ -22,7 +22,7 @@ export interface BreadcrumbItemProps extends ButtonHTMLAttributes<HTMLButtonElem
   /**
    * As what the component should be rendered
    */
-  as?: string | ElementType;
+  as?: ElementType;
   /**
    * Bottom bar item contents.
    */

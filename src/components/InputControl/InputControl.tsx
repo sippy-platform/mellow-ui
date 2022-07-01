@@ -1,12 +1,12 @@
-import clsx from 'clsx';
-import { InputHTMLAttributes } from 'react';
-import { InputLabel } from '..';
+import clsx from "clsx";
+import { InputHTMLAttributes } from "react";
+import { InputLabel } from "..";
 
-export interface InputControlProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputControlProps {
   /**
    * ID of the input
    */
-  id?: string;
+  id: string;
   /**
    * Name of the input
    */
@@ -27,6 +27,10 @@ export interface InputControlProps extends InputHTMLAttributes<HTMLInputElement>
    * Placeholder of the input
    */
   placeholder?: string;
+  /**
+   * The callback for changing values
+   */
+  onChange: (form: { id: string, value: any | null }) => void;
   /**
    * Type of the input
    */
@@ -49,28 +53,33 @@ export const InputControl = ({
   type,
   placeholder,
   helper,
+  onChange,
   ...props
 }: InputControlProps) => {
   const uniqueName = name ?? id;
 
   return (
-    <div className="form-floating">
-      <input
-        name={uniqueName}
-        id={id}
-        type={type}
-        value={value}
-        className={clsx(
-          'input',
-          className
-        )}
-        placeholder={placeholder}
-        aria-describedby={helper ? `${uniqueName}-help` : undefined}
-        {...props}
-      />
-      <InputLabel id={uniqueName}>{label}</InputLabel>
-      {helper && <div id={`${uniqueName}-help`} className="input-text">{helper}</div>}
-    </div>
+    <>
+      <div className="form-floating">
+        <input
+          name={uniqueName}
+          id={id}
+          type={type}
+          value={value}
+          className={clsx("input", className)}
+          placeholder={placeholder}
+          onChange={(event) => onChange({ value: event?.target.value, id })}
+          aria-describedby={helper ? `${uniqueName}-help` : undefined}
+          {...props}
+        />
+        <InputLabel id={uniqueName}>{label}</InputLabel>
+      </div>
+      {helper && (
+        <div id={`${uniqueName}-help`} className="input-text">
+          {helper}
+        </div>
+      )}
+    </>
   );
 };
 

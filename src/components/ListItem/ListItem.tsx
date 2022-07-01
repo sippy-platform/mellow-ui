@@ -91,7 +91,6 @@ export function ListItem<T extends ElementType>({
           [`${color}`]: color,
           'active': active,
           'list-item-colored': fullColor,
-          'list-item-action': !!href || !!onClick || !!startAction || !!endAction,
           'disabled': disabled
         },
         className

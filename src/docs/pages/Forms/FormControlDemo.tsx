@@ -28,7 +28,7 @@ export default function FormControlDemo() {
           label="Select planet"
           placeholder="Select planet"
           value={value}
-          onChange={(value: number) => setValue(value)}
+          onChange={(formInput: { id: string, value: any | null }) => setValue(formInput.value)}
           options={[
             { value: 1, label: 'Mercury' },
             { value: 2, label: 'Venus' },

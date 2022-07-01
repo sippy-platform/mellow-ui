@@ -7,7 +7,7 @@ export interface InputControlProps
   /**
    * ID of the input
    */
-  id?: string;
+  id: string;
   /**
    * Name of the input
    */
@@ -28,6 +28,10 @@ export interface InputControlProps
    * Placeholder of the input
    */
   placeholder?: string;
+  /**
+   * The callback for changing values
+   */
+  onChange: (value: any | null) => void;
   /**
    * Type of the input
    */
@@ -50,6 +54,7 @@ export const InputControl = ({
   type,
   placeholder,
   helper,
+  onChange,
   ...props
 }: InputControlProps) => {
   const uniqueName = name ?? id;
@@ -64,6 +69,7 @@ export const InputControl = ({
           value={value}
           className={clsx("input", className)}
           placeholder={placeholder}
+          onChange={(event) => onChange({ value: event?.target.value, id })}
           aria-describedby={helper ? `${uniqueName}-help` : undefined}
           {...props}
         />

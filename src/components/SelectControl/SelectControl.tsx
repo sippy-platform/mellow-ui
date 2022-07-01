@@ -12,7 +12,7 @@ export interface SelectControlProps {
   /**
    * ID of the input
    */
-  id?: string;
+  id: string;
   /**
    * The name attached of the select
    */
@@ -97,7 +97,7 @@ export const SelectControl = ({
       <div className="form-floating">
         <Listbox
           value={value}
-          onChange={onChange}
+          onChange={(value) => onChange({ value, id })}
           disabled={disabled}
           name={uniqueName}
         >

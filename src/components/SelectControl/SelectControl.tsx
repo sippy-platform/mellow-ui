@@ -87,7 +87,10 @@ export const SelectControl = ({
   ...props
 }: SelectControlProps) => {
   const uniqueName = name ?? id;
-  const currentValue = useMemo(() => options.find((option) => getValue(option) === value), [options, value]);
+  const currentValue = useMemo(
+    () => options.find((option) => getValue(option) === value),
+    [options, value]
+  );
 
   return (
     <>

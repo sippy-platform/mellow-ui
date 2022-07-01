@@ -1,12 +1,12 @@
-import React, { ReactNode, Fragment, useMemo } from 'react';
+import React, { ReactNode, Fragment, useMemo } from "react";
 
-import { InputLabel } from '..';
+import { InputLabel } from "..";
 
-import { Listbox, Transition } from '@headlessui/react';
+import { Listbox, Transition } from "@headlessui/react";
 
-import clsx from 'clsx';
-import ValkyrieIcon, { viAngleDown } from '@sippy-platform/valkyrie';
-import SelectItem from '../SelectItem';
+import clsx from "clsx";
+import ValkyrieIcon, { viAngleDown } from "@sippy-platform/valkyrie";
+import SelectItem from "../SelectItem";
 
 export interface SelectControlProps {
   /**
@@ -87,38 +87,63 @@ export const SelectControl = ({
   ...props
 }: SelectControlProps) => {
   const uniqueName = name ?? id;
-  const currentValue = useMemo(() => {
-    return options.find((option) => getValue(option) === value);
-  }, [options, value]);
+  const currentValue = useMemo(() => options.find((option) => getValue(option) === value), [options, value]);
 
   return (
-    <div className="form-floating">
-      <Listbox value={value} onChange={onChange} disabled={disabled} name={uniqueName}>
-        <Listbox.Button className={clsx('input-select', className)} {...props}>
-          <span className="text-truncate pt-4 pb-1">{currentValue ? getLabel(currentValue) : <span className="select-placeholder">{placeholder}</span>}</span>
-          <span className="d-flex align-items-center">
-            <ValkyrieIcon icon={viAngleDown} />
-          </span>
-        </Listbox.Button>
-        <Transition
-          as={Fragment}
-          enter="transition ease-in duration-50"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
+    <>
+      <div className="form-floating">
+        <Listbox
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+          name={uniqueName}
         >
-          <Listbox.Options className="listbox">
-            {options.map((option, key) => (
-              <SelectItem option={option} getValue={getValue} getLabel={getLabel} key={key} />
-            ))}
-          </Listbox.Options>
-        </Transition>
-      </Listbox>
-      <InputLabel id={uniqueName} shrink={!!value}>{label}</InputLabel>
-      {helper && <div id={`${uniqueName}-help`} className="input-text">{helper}</div>}
-    </div>
+          <Listbox.Button
+            className={clsx("input-select", className)}
+            {...props}
+          >
+            <span className="text-truncate pt-4 pb-1">
+              {currentValue ? (
+                getLabel(currentValue)
+              ) : (
+                <span className="select-placeholder">{placeholder}</span>
+              )}
+            </span>
+            <span className="d-flex align-items-center">
+              <ValkyrieIcon icon={viAngleDown} />
+            </span>
+          </Listbox.Button>
+          <Transition
+            as={Fragment}
+            enter="transition ease-in duration-50"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <Listbox.Options className="listbox">
+              {options.map((option, key) => (
+                <SelectItem
+                  option={option}
+                  getValue={getValue}
+                  getLabel={getLabel}
+                  key={key}
+                />
+              ))}
+            </Listbox.Options>
+          </Transition>
+        </Listbox>
+        <InputLabel id={uniqueName} shrink={!!value}>
+          {label}
+        </InputLabel>
+      </div>
+      {helper && (
+        <div id={`${uniqueName}-help`} className="input-text">
+          {helper}
+        </div>
+      )}
+    </>
   );
 };
 

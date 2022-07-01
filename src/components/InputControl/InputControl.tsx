@@ -1,8 +1,9 @@
-import clsx from 'clsx';
-import { InputHTMLAttributes } from 'react';
-import { InputLabel } from '..';
+import clsx from "clsx";
+import { InputHTMLAttributes } from "react";
+import { InputLabel } from "..";
 
-export interface InputControlProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputControlProps
+  extends InputHTMLAttributes<HTMLInputElement> {
   /**
    * ID of the input
    */
@@ -54,23 +55,26 @@ export const InputControl = ({
   const uniqueName = name ?? id;
 
   return (
-    <div className="form-floating">
-      <input
-        name={uniqueName}
-        id={id}
-        type={type}
-        value={value}
-        className={clsx(
-          'input',
-          className
-        )}
-        placeholder={placeholder}
-        aria-describedby={helper ? `${uniqueName}-help` : undefined}
-        {...props}
-      />
-      <InputLabel id={uniqueName}>{label}</InputLabel>
-      {helper && <div id={`${uniqueName}-help`} className="input-text">{helper}</div>}
-    </div>
+    <>
+      <div className="form-floating">
+        <input
+          name={uniqueName}
+          id={id}
+          type={type}
+          value={value}
+          className={clsx("input", className)}
+          placeholder={placeholder}
+          aria-describedby={helper ? `${uniqueName}-help` : undefined}
+          {...props}
+        />
+        <InputLabel id={uniqueName}>{label}</InputLabel>
+      </div>
+      {helper && (
+        <div id={`${uniqueName}-help`} className="input-text">
+          {helper}
+        </div>
+      )}
+    </>
   );
 };
 

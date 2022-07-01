@@ -2,8 +2,7 @@ import clsx from "clsx";
 import { InputHTMLAttributes } from "react";
 import { InputLabel } from "..";
 
-export interface InputControlProps
-  extends InputHTMLAttributes<HTMLInputElement> {
+export interface InputControlProps {
   /**
    * ID of the input
    */
@@ -31,7 +30,7 @@ export interface InputControlProps
   /**
    * The callback for changing values
    */
-  onChange: (value: any | null) => void;
+  onChange: (form: { id: string, value: any | null }) => void;
   /**
    * Type of the input
    */

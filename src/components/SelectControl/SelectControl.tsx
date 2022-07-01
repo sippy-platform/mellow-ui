@@ -40,7 +40,7 @@ export interface SelectControlProps {
   /**
    * The callback for changing values
    */
-  onChange: (value: any | null) => void;
+  onChange: (form: { id: string, value: any | null }) => void;
   /**
    * The callback for getting the option label
    */

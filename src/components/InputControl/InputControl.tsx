@@ -36,6 +36,10 @@ export interface InputControlProps {
    */
   type?: string;
   /**
+   * If the input is required or not
+   */
+  required?: boolean;
+  /**
    * Custom classes for the label
    */
   className?: string;
@@ -54,6 +58,7 @@ export const InputControl = ({
   placeholder,
   helper,
   onChange,
+  required,
   ...props
 }: InputControlProps) => {
   const uniqueName = name ?? id;
@@ -68,6 +73,7 @@ export const InputControl = ({
           value={value}
           className={clsx("input", className)}
           placeholder={placeholder}
+          required={required}
           onChange={(event) => onChange({ value: event?.target.value, id })}
           aria-describedby={helper ? `${uniqueName}-help` : undefined}
           {...props}

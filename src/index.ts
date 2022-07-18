@@ -61,8 +61,14 @@ export type { DialogBodyProps } from '@components/DialogBody';
 export { default as DialogHeader } from '@components/DialogHeader';
 export type { DialogHeaderProps } from '@components/DialogHeader';
 
+export { default as InputAddon } from '@components/InputAddon';
+export type { InputAddonProps } from '@components/InputAddon';
+
 export { default as InputControl } from '@components/InputControl';
 export type { InputControlProps } from '@components/InputControl';
+
+export { default as InputGroup } from '@components/InputGroup';
+export type { InputGroupProps } from '@components/InputGroup';
 
 export { default as Grid } from '@components/Grid';
 export type { GridProps } from '@components/Grid';

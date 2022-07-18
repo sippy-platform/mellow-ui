@@ -16,6 +16,7 @@ import DialogDemo from './pages/Components/DialogDemo';
 import FormControlDemo from './pages/Forms/FormControlDemo';
 import GridDemo from './pages/Layout/GridDemo';
 import InputDemo from './pages/Forms/InputDemo';
+import InputGroupDemo from './pages/Forms/InputGroupDemo';
 import InputLabelDemo from './pages/Forms/InputLabelDemo';
 import Installation from './pages/GetStarted/Installation';
 import LabelDemo from './pages/Components/LabelDemo';
@@ -46,6 +47,7 @@ function App() {
         <Route path="/formcontrol" element={<FormControlDemo />} />
         <Route path="/grid" element={<GridDemo />} />
         <Route path="/input" element={<InputDemo />} />
+        <Route path="/inputgroup" element={<InputGroupDemo />} />
         <Route path="/inputlabel" element={<InputLabelDemo />} />
         <Route path="/installation" element={<Installation />} />
         <Route path="/label" element={<LabelDemo />} />

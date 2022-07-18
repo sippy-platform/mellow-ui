@@ -13,7 +13,7 @@ export default function FormControlDemo() {
 
       <h3>Input Control</h3>
       <DemoBox>
-        <Grid xs={{ grid: 1, gap: 3 }}>
+        <Grid>
           <InputControl name="default" label="Default" placeholder="Default" helper="A default text field." />
           <InputControl name="email" type="email" label="Email" placeholder="Email" />
           <InputControl name="password" type="password" label="Password" placeholder="Password" />

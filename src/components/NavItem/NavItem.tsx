@@ -12,6 +12,10 @@ export type NavItemProps<T extends ElementType> = {
    */
   active?: boolean;
   /**
+   * Whether the element is disabled
+   */
+  disabled?: boolean;
+  /**
    * Custom classes for the label
    */
   className?: string;
@@ -28,6 +32,7 @@ export function NavItem<T extends ElementType>({
   as,
   active,
   className,
+  disabled,
   children,
   ...props
 }: NavItemProps<T>) {
@@ -38,10 +43,12 @@ export function NavItem<T extends ElementType>({
       className={clsx(
         'pivot-link',
         {
-          'active': active
+          'active': active,
+          'disabled': disabled
         },
         className
       )}
+      disabled={disabled}
       {...props}
     >
       {children}

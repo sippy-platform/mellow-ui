@@ -20,7 +20,7 @@ export default function useColor(string: string): MellowColor {
     const colorIndex = Math.floor(hash % 16);
 
     return colors[colorIndex];
-  }, []);
+  }, [string]);
 
   return color;
 }

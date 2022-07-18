@@ -22,6 +22,9 @@ export type { BottomBarItemProps } from '@components/BottomBarItem';
 export { default as Button } from '@components/Button';
 export type { ButtonProps } from '@components/Button';
 
+export { default as ButtonGroup } from '@components/ButtonGroup';
+export type { ButtonGroupProps } from '@components/ButtonGroup';
+
 export { default as Card } from '@components/Card';
 export type { CardProps } from '@components/Card';
 
@@ -161,5 +164,8 @@ export type { SelectItemProps } from '@components/SelectItem';
 
 export { default as SelectLabel } from '@components/SelectLabel';
 export type { SelectLabelProps } from '@components/SelectLabel';
+
+export { default as Toolbar } from '@components/Toolbar';
+export type { ToolbarProps } from '@components/Toolbar';
 
 export { default as useColor } from '@hooks/useColor';

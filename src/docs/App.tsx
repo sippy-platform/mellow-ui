@@ -9,6 +9,7 @@ import AvatarDemo from './pages/Components/AvatarDemo';
 import BottomBarDemo from './pages/Components/BottomBarDemo';
 import BreadcrumbDemo from './pages/Components/BreadcrumbDemo';
 import ButtonDemo from './pages/Components/ButtonDemo';
+import ButtonGroupDemo from './pages/Components/ButtonGroupDemo';
 import CardDemo from './pages/Components/CardDemo';
 import CheckboxDemo from './pages/Forms/CheckboxDemo';
 import ContainerDemo from './pages/Layout/ContainerDemo';
@@ -30,6 +31,7 @@ import ProgressDemo from './pages/Components/ProgressDemo';
 import RadioDemo from './pages/Forms/RadioDemo';
 import RangeDemo from './pages/Forms/RangeDemo';
 import SelectDemo from './pages/Forms/SelectDemo';
+import ToolbarDemo from './pages/Components/ToolbarDemo';
 
 function App() {
   return (
@@ -40,6 +42,7 @@ function App() {
         <Route path="/bottombar" element={<BottomBarDemo />} />
         <Route path="/breadcrumb" element={<BreadcrumbDemo />} />
         <Route path="/button" element={<ButtonDemo />} />
+        <Route path="/buttongroup" element={<ButtonGroupDemo />} />
         <Route path="/card" element={<CardDemo />} />
         <Route path="/checkbox" element={<CheckboxDemo />} />
         <Route path="/container" element={<ContainerDemo />} />
@@ -60,6 +63,7 @@ function App() {
         <Route path="/radio" element={<RadioDemo />} />
         <Route path="/range" element={<RangeDemo />} />
         <Route path="/select" element={<SelectDemo />} />
+        <Route path="/toolbar" element={<ToolbarDemo />} />
       </Routes>
     </Layout>
   );

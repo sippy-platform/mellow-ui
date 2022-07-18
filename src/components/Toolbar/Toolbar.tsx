@@ -24,7 +24,7 @@ export function Toolbar({
   return (
     <div
       className={clsx(
-        'btn-toolbar',
+        'toolbar',
         className
       )}
       role="toolbar"

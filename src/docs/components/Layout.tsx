@@ -34,6 +34,7 @@ export default function Layout({ children }) {
             <p className="h6 mb-2 mt-3 ms-3">Forms</p>
             <ListItem primary="Checkbox" onClick={() => navigate('/checkbox')} />
             <ListItem primary="Input" onClick={() => navigate('/input')} />
+            <ListItem primary="Input Group" onClick={() => navigate('/inputgroup')} />
             <ListItem primary="Input Label" onClick={() => navigate('/inputlabel')} />
             <ListItem primary="Radio" onClick={() => navigate('/radio')} />
             <ListItem primary="Range" onClick={() => navigate('/range')} />
@@ -44,6 +45,7 @@ export default function Layout({ children }) {
             <ListItem primary="Avatar" onClick={() => navigate('/avatar')} />
             <ListItem primary="Bottom Bar" onClick={() => navigate('/bottombar')} />
             <ListItem primary="Breadcrumb" onClick={() => navigate('/breadcrumb')} />
+            <ListItem primary="Button Group" onClick={() => navigate('/buttongroup')} />
             <ListItem primary="Button" onClick={() => navigate('/button')} />
             <ListItem primary="Card" onClick={() => navigate('/card')} />
             <ListItem primary="Dialog" onClick={() => navigate('/dialog')} />
@@ -54,6 +56,7 @@ export default function Layout({ children }) {
             <ListItem primary="Offcanvas" onClick={() => navigate('/offcanvas')} />
             <ListItem primary="Pivot" onClick={() => navigate('/pivot')} />
             <ListItem primary="Progress" onClick={() => navigate('/progress')} />
+            <ListItem primary="Toolbar" onClick={() => navigate('/toolbar')} />
           </List>
         </aside>
       </div>

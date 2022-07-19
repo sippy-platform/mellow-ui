@@ -22,6 +22,9 @@ export type { BottomBarItemProps } from '@components/BottomBarItem';
 export { default as Button } from '@components/Button';
 export type { ButtonProps } from '@components/Button';
 
+export { default as ButtonGroup } from '@components/ButtonGroup';
+export type { ButtonGroupProps } from '@components/ButtonGroup';
+
 export { default as Card } from '@components/Card';
 export type { CardProps } from '@components/Card';
 
@@ -61,8 +64,14 @@ export type { DialogBodyProps } from '@components/DialogBody';
 export { default as DialogHeader } from '@components/DialogHeader';
 export type { DialogHeaderProps } from '@components/DialogHeader';
 
+export { default as InputAddon } from '@components/InputAddon';
+export type { InputAddonProps } from '@components/InputAddon';
+
 export { default as InputControl } from '@components/InputControl';
 export type { InputControlProps } from '@components/InputControl';
+
+export { default as InputGroup } from '@components/InputGroup';
+export type { InputGroupProps } from '@components/InputGroup';
 
 export { default as Grid } from '@components/Grid';
 export type { GridProps } from '@components/Grid';
@@ -155,3 +164,6 @@ export type { SelectItemProps } from '@components/SelectItem';
 
 export { default as SelectLabel } from '@components/SelectLabel';
 export type { SelectLabelProps } from '@components/SelectLabel';
+
+export { default as Toolbar } from '@components/Toolbar';
+export type { ToolbarProps } from '@components/Toolbar';

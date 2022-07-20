@@ -14,6 +14,7 @@ import CardDemo from './pages/Components/CardDemo';
 import CheckboxDemo from './pages/Forms/CheckboxDemo';
 import ContainerDemo from './pages/Layout/ContainerDemo';
 import DialogDemo from './pages/Components/DialogDemo';
+import DropdownDemo from './pages/Components/DropdownDemo';
 import FormControlDemo from './pages/Forms/FormControlDemo';
 import GridDemo from './pages/Layout/GridDemo';
 import InputDemo from './pages/Forms/InputDemo';
@@ -27,6 +28,7 @@ import MenuDemo from './pages/Components/MenuDemo';
 import NavDemo from './pages/Components/NavDemo';
 import OffcanvasDemo from './pages/Components/OffcanvasDemo';
 import PivotDemo from './pages/Components/PivotDemo';
+import PlaceholderDemo from './pages/Components/PlaceholderDemo';
 import ProgressDemo from './pages/Components/ProgressDemo';
 import RadioDemo from './pages/Forms/RadioDemo';
 import RangeDemo from './pages/Forms/RangeDemo';
@@ -47,6 +49,7 @@ function App() {
         <Route path="/checkbox" element={<CheckboxDemo />} />
         <Route path="/container" element={<ContainerDemo />} />
         <Route path="/dialog" element={<DialogDemo />} />
+        <Route path="/dropdown" element={<DropdownDemo />} />
         <Route path="/formcontrol" element={<FormControlDemo />} />
         <Route path="/grid" element={<GridDemo />} />
         <Route path="/input" element={<InputDemo />} />
@@ -59,6 +62,7 @@ function App() {
         <Route path="/nav" element={<NavDemo />} />
         <Route path="/offcanvas" element={<OffcanvasDemo />} />
         <Route path="/pivot" element={<PivotDemo />} />
+        <Route path="/placeholder" element={<PlaceholderDemo />} />
         <Route path="/progress" element={<ProgressDemo />} />
         <Route path="/radio" element={<RadioDemo />} />
         <Route path="/range" element={<RangeDemo />} />

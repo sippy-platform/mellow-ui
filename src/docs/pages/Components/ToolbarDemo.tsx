@@ -58,6 +58,22 @@ export default function ToolbarDemo() {
           <Button>Search</Button>
         </Toolbar>
       </DemoBox>
+      <h3>Positioning</h3>
+      <p>You can justify the content in a toolbar with the <code>justify</code> prop. This is practically a shorthand for the various <code>justify-content-*</code> classes.</p>
+      <DemoBox>
+        <Toolbar justify="center">
+          <ButtonGroup>
+            <Button>Button</Button>
+            <Button>Groups</Button>
+            <Button>In</Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button>A</Button>
+            <Button>Toolbar</Button>
+          </ButtonGroup>
+          <Button color="red" variant="hover">Single</Button>
+        </Toolbar>
+      </DemoBox>
     </>
   );
 }

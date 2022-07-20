@@ -61,8 +61,17 @@ export type { DialogProps } from '@components/Dialog';
 export { default as DialogBody } from '@components/DialogBody';
 export type { DialogBodyProps } from '@components/DialogBody';
 
+export { default as DialogFooter } from '@components/DialogFooter';
+export type { DialogFooterProps } from '@components/DialogFooter';
+
 export { default as DialogHeader } from '@components/DialogHeader';
 export type { DialogHeaderProps } from '@components/DialogHeader';
+
+export { default as Dropdown } from '@components/Dropdown';
+export type { DropdownProps } from '@components/Dropdown';
+
+export { default as DropdownItem } from '@components/DropdownItem';
+export type { DropdownItemProps } from '@components/DropdownItem';
 
 export { default as InputAddon } from '@components/InputAddon';
 export type { InputAddonProps } from '@components/InputAddon';
@@ -138,6 +147,9 @@ export type { PivotPanelProps } from '@components/PivotPanel';
 
 export { default as PivotPanels } from '@components/PivotPanels';
 export type { PivotPanelsProps } from '@components/PivotPanels';
+
+export { default as Placeholder } from '@components/Placeholder';
+export type { PlaceholderProps } from '@components/Placeholder';
 
 export { default as Progress } from '@components/Progress';
 export type { ProgressProps } from '@components/Progress';

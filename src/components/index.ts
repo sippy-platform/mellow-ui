@@ -148,6 +148,9 @@ export type { PivotPanelProps } from '@components/PivotPanel';
 export { default as PivotPanels } from '@components/PivotPanels';
 export type { PivotPanelsProps } from '@components/PivotPanels';
 
+export { default as Placeholder } from '@components/Placeholder';
+export type { PlaceholderProps } from '@components/Placeholder';
+
 export { default as Progress } from '@components/Progress';
 export type { ProgressProps } from '@components/Progress';
 

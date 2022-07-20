@@ -28,6 +28,7 @@ import MenuDemo from './pages/Components/MenuDemo';
 import NavDemo from './pages/Components/NavDemo';
 import OffcanvasDemo from './pages/Components/OffcanvasDemo';
 import PivotDemo from './pages/Components/PivotDemo';
+import PlaceholderDemo from './pages/Components/PlaceholderDemo';
 import ProgressDemo from './pages/Components/ProgressDemo';
 import RadioDemo from './pages/Forms/RadioDemo';
 import RangeDemo from './pages/Forms/RangeDemo';
@@ -61,6 +62,7 @@ function App() {
         <Route path="/nav" element={<NavDemo />} />
         <Route path="/offcanvas" element={<OffcanvasDemo />} />
         <Route path="/pivot" element={<PivotDemo />} />
+        <Route path="/placeholder" element={<PlaceholderDemo />} />
         <Route path="/progress" element={<ProgressDemo />} />
         <Route path="/radio" element={<RadioDemo />} />
         <Route path="/range" element={<RangeDemo />} />

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import DemoBox from "@docs/components/DemoBox";
 
 import {
@@ -8,9 +6,7 @@ import {
   DropdownItem
 } from "@components";
 
-export default function GridDemo() {
-  const [open, setOpen] = useState(false);
-
+export default function DropdownDemo() {
   return (
     <>
       <h2>Dialog</h2>

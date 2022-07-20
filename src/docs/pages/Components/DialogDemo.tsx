@@ -11,7 +11,7 @@ import {
   DialogHeader,
 } from "@components";
 
-export default function GridDemo() {
+export default function DialogDemo() {
   const [open, setOpen] = useState(false);
 
   return (

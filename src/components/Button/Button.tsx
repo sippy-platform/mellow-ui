@@ -40,6 +40,10 @@ interface IButtonProps<T> extends ButtonHTMLAttributes<HTMLButtonElement> {
    */
   as?: T;
   /**
+   * Is the button a placeholder
+   */
+  placeholderWidth?: 0 | 1 | 2 | 3 | 4 | 5 | 25 | 50 | 75 | 100 | 'auto';
+  /**
    * Button contents.
    */
   children: ReactNode;
@@ -65,9 +69,33 @@ export function Button<T extends ElementType>({
   href,
   className,
   as,
+  placeholderWidth,
   ...props
 }: ButtonProps<T>) {
   const Component = useMemo(() => (as ? as : (href ? 'a' : 'button')) as ElementType, [as, href]);
+
+  if (placeholderWidth) {
+    return (
+      <button
+        type="button"
+        className={clsx(
+          'btn',
+          'placeholder',
+          'disabled',
+          `w-${placeholderWidth}`,
+          `btn-${variant}`,
+          {
+            [`btn-${size}`]: size !== 'md',
+            [`${color}`]: variant === 'color' || variant === 'hover',
+            'btn-block': block,
+          },
+          className
+        )}
+        disabled
+        {...props}
+      />
+    );
+  }
 
   return (
     <Component

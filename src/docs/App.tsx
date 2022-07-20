@@ -14,6 +14,7 @@ import CardDemo from './pages/Components/CardDemo';
 import CheckboxDemo from './pages/Forms/CheckboxDemo';
 import ContainerDemo from './pages/Layout/ContainerDemo';
 import DialogDemo from './pages/Components/DialogDemo';
+import DropdownDemo from './pages/Components/DropdownDemo';
 import FormControlDemo from './pages/Forms/FormControlDemo';
 import GridDemo from './pages/Layout/GridDemo';
 import InputDemo from './pages/Forms/InputDemo';
@@ -47,6 +48,7 @@ function App() {
         <Route path="/checkbox" element={<CheckboxDemo />} />
         <Route path="/container" element={<ContainerDemo />} />
         <Route path="/dialog" element={<DialogDemo />} />
+        <Route path="/dropdown" element={<DropdownDemo />} />
         <Route path="/formcontrol" element={<FormControlDemo />} />
         <Route path="/grid" element={<GridDemo />} />
         <Route path="/input" element={<InputDemo />} />

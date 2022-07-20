@@ -67,6 +67,12 @@ export type { DialogFooterProps } from '@components/DialogFooter';
 export { default as DialogHeader } from '@components/DialogHeader';
 export type { DialogHeaderProps } from '@components/DialogHeader';
 
+export { default as Dropdown } from '@components/Dropdown';
+export type { DropdownProps } from '@components/Dropdown';
+
+export { default as DropdownItem } from '@components/DropdownItem';
+export type { DropdownItemProps } from '@components/DropdownItem';
+
 export { default as InputAddon } from '@components/InputAddon';
 export type { InputAddonProps } from '@components/InputAddon';
 

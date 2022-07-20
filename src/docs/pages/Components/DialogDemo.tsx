@@ -7,6 +7,7 @@ import {
   CloseButton,
   Dialog,
   DialogBody,
+  DialogFooter,
   DialogHeader,
 } from "@components";
 
@@ -29,6 +30,9 @@ export default function GridDemo() {
                 data will be permanently removed. This action cannot be undone.
               </p>
             </DialogBody>
+            <DialogFooter>
+              <Button onClick={() => setOpen(false)}>Dismiss</Button>
+            </DialogFooter>
           </Dialog>
         </div>
       </DemoBox>

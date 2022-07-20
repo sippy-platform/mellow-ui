@@ -8,6 +8,10 @@ export interface ToolbarProps {
    */
   className?: string;
   /**
+   * Custom classes for the label
+   */
+  justify?: 'start' | 'end' | 'center' | 'between' | 'around' | 'evenly';
+  /**
    * Button contents.
    */
   children: ReactNode;
@@ -19,12 +23,16 @@ export interface ToolbarProps {
 export function Toolbar({
   children,
   className,
+  justify = 'start',
   ...props
 }: ToolbarProps) {
   return (
     <div
       className={clsx(
         'toolbar',
+        {
+          [`justify-content-${justify}`]: justify !== 'start'
+        },
         className
       )}
       role="toolbar"

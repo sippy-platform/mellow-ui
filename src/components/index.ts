@@ -61,6 +61,9 @@ export type { DialogProps } from '@components/Dialog';
 export { default as DialogBody } from '@components/DialogBody';
 export type { DialogBodyProps } from '@components/DialogBody';
 
+export { default as DialogFooter } from '@components/DialogFooter';
+export type { DialogFooterProps } from '@components/DialogFooter';
+
 export { default as DialogHeader } from '@components/DialogHeader';
 export type { DialogHeaderProps } from '@components/DialogHeader';
 

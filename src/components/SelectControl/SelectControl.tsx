@@ -137,7 +137,7 @@ export const SelectControl = ({
             </Listbox.Options>
           </Transition>
         </Listbox>
-        <InputLabel id={uniqueName} shrink={!!value}>
+        <InputLabel id={uniqueName} shrink={value !== undefined || value !== null}>
           {label}
         </InputLabel>
       </div>

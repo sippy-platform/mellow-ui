@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { InputLabel } from "@components";
+import { InputLabel } from "@";
 
 export default function InputLabelDemo() {
   return (

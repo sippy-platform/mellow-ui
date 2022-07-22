@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardLink,
   CardTitle,
-} from "@components";
+} from "@";
 
 export default function CardDemo() {
   return (

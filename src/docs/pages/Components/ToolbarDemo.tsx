@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Button, ButtonGroup, Input, InputGroup, InputAddon, Toolbar } from "@components";
+import { Button, ButtonGroup, Input, InputGroup, InputAddon, Toolbar } from "@";
 
 export default function ToolbarDemo() {
   return (

@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Grid, InputControl, SelectControl } from "@components";
+import { Grid, InputControl, SelectControl } from "@";
 import { useState } from "react";
 
 export default function FormControlDemo() {

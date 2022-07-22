@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import DemoBox from "@docs/components/DemoBox";
 
-import { Range } from "@components";
+import { Range } from "@";
 
 export default function RangeDemo() {
   const [range, setRange] = useState(50);

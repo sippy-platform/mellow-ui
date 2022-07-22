@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Button, ButtonGroup } from "@components";
+import { Button, ButtonGroup } from "@";
 
 export default function ButtonGroupDemo() {
   return (

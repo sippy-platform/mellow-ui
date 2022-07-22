@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Grid, Col } from "@components";
+import { Grid, Col } from "@";
 
 export default function GridDemo() {
   return (

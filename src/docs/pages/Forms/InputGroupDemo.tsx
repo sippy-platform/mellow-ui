@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Button, Grid, Input, InputAddon, InputGroup } from "@components";
+import { Button, Grid, Input, InputAddon, InputGroup } from "@";
 import ValkyrieIcon, { viMagnifyingGlass } from "@sippy-platform/valkyrie";
 
 export default function InputGroupDemo() {

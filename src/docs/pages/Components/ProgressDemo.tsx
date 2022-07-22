@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Progress } from "@components";
+import { Progress } from "@";
 
 export default function ProgressDemo() {
   return (

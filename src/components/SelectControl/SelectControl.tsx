@@ -1,12 +1,12 @@
 import { ReactNode, Fragment, useMemo } from "react";
 
-import { InputLabel } from "..";
+import InputLabel from "../InputLabel";
+import SelectItem from "../SelectItem";
 
 import { Listbox, Transition } from "@headlessui/react";
 
 import clsx from "clsx";
 import ValkyrieIcon, { viAngleDown } from "@sippy-platform/valkyrie";
-import SelectItem from "../SelectItem";
 
 export interface SelectControlProps {
   /**
@@ -137,7 +137,7 @@ export const SelectControl = ({
             </Listbox.Options>
           </Transition>
         </Listbox>
-        <InputLabel id={uniqueName} shrink={!!value}>
+        <InputLabel id={uniqueName} shrink={value !== undefined || value !== null}>
           {label}
         </InputLabel>
       </div>

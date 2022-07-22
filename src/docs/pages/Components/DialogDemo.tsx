@@ -9,7 +9,7 @@ import {
   DialogBody,
   DialogFooter,
   DialogHeader,
-} from "@components";
+} from "@";
 
 export default function DialogDemo() {
   const [open, setOpen] = useState(false);

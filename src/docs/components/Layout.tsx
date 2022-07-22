@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Container, List, ListItem } from "@components";
+import { Container, List, ListItem } from "@";
 
 import './layout.scss';
 

@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Menu, MenuItem, MenuItems, MenuTrigger } from "@components";
+import { Menu, MenuItem, MenuItems, MenuTrigger } from "@";
 
 export default function MenuDemo() {
   return (

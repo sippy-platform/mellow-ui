@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import DemoBox from "@docs/components/DemoBox";
 
-import { Radio, List, ListItem, ListItemDivider } from "@components";
+import { Radio, List, ListItem, ListItemDivider } from "@";
 import ValkyrieIcon, { viHouse } from "@sippy-platform/valkyrie";
 import { RadioGroup } from "@headlessui/react";
 

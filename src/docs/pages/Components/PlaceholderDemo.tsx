@@ -9,7 +9,7 @@ import {
   CardTitle,
   Grid,
   Placeholder,
-} from "@components";
+} from "@";
 
 export default function PlaceholderDemo() {
   const [open, setOpen] = useState(false);

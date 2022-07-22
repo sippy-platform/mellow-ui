@@ -1,6 +1,6 @@
 import DemoBox from '@docs/components/DemoBox';
 
-import { Avatar } from '@components';
+import { Avatar } from '@';
 import ValkyrieIcon, { viUser } from '@sippy-platform/valkyrie';
 
 export default function AvatarDemo() {

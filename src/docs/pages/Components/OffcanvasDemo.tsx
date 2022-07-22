@@ -8,7 +8,7 @@ import {
   Offcanvas,
   OffcanvasBody,
   OffcanvasHeader,
-} from "@components";
+} from "@";
 
 export default function OffcanvasDemo() {
   const [canvas, setCanvas] = useState(false);

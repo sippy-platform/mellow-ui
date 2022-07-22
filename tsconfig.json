@@ -17,6 +17,7 @@
     "declaration": true,
     "outDir": "dist",
     "paths": {
+      "@": ["./src/index.ts"],
       "@docs/*": ["./src/docs/*"],
       "@components/*": ["./src/components/*"],
       "@hooks/*": ["./src/hooks/*"]

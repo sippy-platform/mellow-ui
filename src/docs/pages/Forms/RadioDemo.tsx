@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import DemoBox from "@docs/components/DemoBox";
 
-import { Radio, RadioGroup } from "@components";
+import { Radio, RadioGroup } from "@";
 
 export default function RadioDemo() {
   const [radio, setRadio] = useState("hello");

@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Label } from "@components";
+import { Label } from "@";
 
 export default function LabelDemo() {
   return (

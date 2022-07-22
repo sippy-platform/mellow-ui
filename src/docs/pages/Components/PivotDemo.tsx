@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels } from "@components";
+import { Pivot, PivotItem, PivotNav, PivotPanel, PivotPanels } from "@";
 
 export default function PivotDemo() {
   return (

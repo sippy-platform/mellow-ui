@@ -1,6 +1,6 @@
 import DemoBox from '@docs/components/DemoBox';
 
-import { BottomBar, BottomBarItem } from '@components';
+import { BottomBar, BottomBarItem } from '@';
 import ValkyrieIcon, { viEllipsis, viGear, viHouse, viSippy, viUser, viValkyrieSword } from '@sippy-platform/valkyrie';
 
 export default function BottomBarDemo() {

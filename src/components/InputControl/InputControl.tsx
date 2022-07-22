@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { InputHTMLAttributes } from "react";
-import { InputLabel } from "..";
+
+import InputLabel from "../InputLabel";
 
 export interface InputControlProps {
   /**

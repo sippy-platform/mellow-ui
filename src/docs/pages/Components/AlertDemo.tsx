@@ -1,6 +1,6 @@
 import DemoBox from '@docs/components/DemoBox';
 
-import { Alert, AlertTitle } from '@components';
+import { Alert, AlertTitle } from '@';
 
 export default function AlertDemo() {
   return (

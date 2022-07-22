@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import DemoBox from "@docs/components/DemoBox";
 
-import { Select } from "@components";
+import { Select } from "@";
 
 export default function SelectDemo() {
   const [select, setSelect] = useState(5);

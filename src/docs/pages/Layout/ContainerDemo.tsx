@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Container } from "@components";
+import { Container } from "@";
 
 export default function ContainerDemo() {
   return (

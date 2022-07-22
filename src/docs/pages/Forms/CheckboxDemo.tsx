@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Checkbox } from "@components";
+import { Checkbox } from "@";
 import { useState } from "react";
 
 export default function CheckboxDemo() {

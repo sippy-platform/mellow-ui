@@ -1,6 +1,6 @@
 import DemoBox from '@docs/components/DemoBox';
 
-import { Breadcrumb, BreadcrumbItem } from '@components';
+import { Breadcrumb, BreadcrumbItem } from '@';
 import ValkyrieIcon, { viHouse } from '@sippy-platform/valkyrie';
 
 export default function BreadcrumbDemo() {

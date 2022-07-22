@@ -4,7 +4,7 @@ import {
   Button,
   Dropdown,
   DropdownItem
-} from "@components";
+} from "@";
 
 export default function DropdownDemo() {
   return (

@@ -1,6 +1,6 @@
 import DemoBox from "@docs/components/DemoBox";
 
-import { Nav, NavItem } from "@components";
+import { Nav, NavItem } from "@";
 
 export default function NavDemo() {
   return (

@@ -93,7 +93,7 @@ export const SelectControl = ({
   );
 
   return (
-    <>
+    <div>
       <div className="form-floating">
         <Listbox
           value={value}
@@ -146,7 +146,7 @@ export const SelectControl = ({
           {helper}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

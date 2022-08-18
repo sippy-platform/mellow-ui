@@ -64,7 +64,7 @@ export const InputControl = ({
   const uniqueName = name ?? id;
 
   return (
-    <>
+    <div>
       <div className="form-floating">
         <input
           name={uniqueName}
@@ -85,7 +85,7 @@ export const InputControl = ({
           {helper}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

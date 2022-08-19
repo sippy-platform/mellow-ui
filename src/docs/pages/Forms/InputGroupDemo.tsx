@@ -10,7 +10,7 @@ export default function InputGroupDemo() {
       <h3>Input Addon</h3>
       <p>The input group allows you to add input addons to an input. These are small text labels.</p>
       <DemoBox>
-        <Grid>
+        <Grid xs={1}>
           <InputGroup>
             <InputAddon>Prefix</InputAddon>
             <Input placeholder="Default" />

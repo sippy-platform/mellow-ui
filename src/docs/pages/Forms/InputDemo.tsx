@@ -7,7 +7,7 @@ export default function InputDemo() {
     <>
       <h2>Input</h2>
       <DemoBox>
-        <Grid>
+        <Grid xs={1}>
           <Input placeholder="Default" />
           <Input type="email" placeholder="Email" />
           <Input type="password" placeholder="Password" />

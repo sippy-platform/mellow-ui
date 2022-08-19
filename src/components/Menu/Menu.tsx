@@ -2,13 +2,7 @@ import { ReactNode } from 'react';
 
 import { Menu as MenuPrimitive } from '@headlessui/react';
 
-import clsx from 'clsx';
-
 export interface MenuProps {
-  /**
-   * The open state
-   */
-  open: boolean;
   /**
    * The contents of the dialog
    */
@@ -19,7 +13,6 @@ export interface MenuProps {
  * Primary UI component for user interaction
  */
 export const Menu = ({
-  open,
   children,
   ...props
 }: MenuProps) => {

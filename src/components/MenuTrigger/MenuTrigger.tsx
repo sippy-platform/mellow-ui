@@ -4,12 +4,7 @@ import { Menu as MenuPrimitive } from '@headlessui/react';
 
 import clsx from 'clsx';
 
-
 export interface MenuTriggerProps {
-  /**
-   * The open state
-   */
-  open: boolean;
   /**
    * Custom classes for the label
    */
@@ -24,7 +19,6 @@ export interface MenuTriggerProps {
  * Primary UI component for user interaction
  */
 export const MenuTrigger = ({
-  open,
   children,
   className,
   ...props

@@ -23,6 +23,7 @@ export default function ListDemo() {
             />
             <ListItem
               primary="This is also list item"
+              secondary="This is a list item description"
               endAction={<Radio value="second" />}
             />
             <ListItemDivider

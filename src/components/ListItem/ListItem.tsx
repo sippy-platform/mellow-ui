@@ -8,6 +8,10 @@ export type ListItemProps<T extends ElementType> = {
    */
   primary: string;
   /**
+   * Show a label around the list
+   */
+  secondary?: string;
+  /**
    * Show the list item as active
    */
   active?: boolean;
@@ -67,6 +71,7 @@ export type ListItemProps<T extends ElementType> = {
 export function ListItem<T extends ElementType>({
   active,
   primary,
+  secondary,
   className,
   href,
   onClick,
@@ -103,6 +108,7 @@ export function ListItem<T extends ElementType>({
       {startAction && <span className="list-item-action-s">{startAction}</span>}
       {startIcon && <span className="list-item-icon-s">{startIcon}</span>}
       {primary && <span className={clsx('list-item-label', { 'text-truncate': truncate })}>{primary}</span>}
+      {secondary && <span className={clsx('list-item-description', { 'text-truncate': truncate })}>{secondary}</span>}
       {endIcon && <span className="list-item-icon-e">{endIcon}</span>}
       {endAction && <span className="list-item-action-e">{endAction}</span>}
     </Component>

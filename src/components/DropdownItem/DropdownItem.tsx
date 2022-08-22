@@ -18,6 +18,10 @@ export interface DropdownItemProps<T> {
    */
   href?: string;
   /**
+   * Optional click handler.
+   */
+  onClick?: () => void;
+  /**
    * Custom classes for the label
    */
   className?: string;
@@ -41,6 +45,7 @@ export function Dropdown<T>({
   color,
   disabled = false,
   children,
+  onClick,
   ...props
 }: DropdownItemProps<T>) {
   const Component = useMemo(() => (as ? as : (href ? 'a' : 'button')) as ElementType, [as, href]);
@@ -58,6 +63,7 @@ export function Dropdown<T>({
             color,
             className
           )}
+          onClick={onClick}
           href={href}
           disabled={disabled}
           {...props}

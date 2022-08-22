@@ -18,9 +18,10 @@
     "outDir": "dist",
     "paths": {
       "@": ["./src/index.ts"],
-      "@docs/*": ["./src/docs/*"],
       "@components/*": ["./src/components/*"],
-      "@hooks/*": ["./src/hooks/*"]
+      "@docs/*": ["./src/docs/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@types/*": ["./src/types/*"],
     }
   },
   "include": ["src/index.ts", "src/components", "src/hooks"],

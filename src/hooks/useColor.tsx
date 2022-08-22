@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-type MellowColor = 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey';
+import { MellowColor } from '@types';
 
 export default function useColor(string: string): MellowColor {
   const colors: MellowColor[] = ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'teal', 'cyan', 'blue', 'indigo', 'violet', 'purple', 'pink', 'rose', 'brown', 'grey'];

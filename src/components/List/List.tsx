@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 
 import clsx from 'clsx';
 
+import { MellowColor } from '@types';
+
 export interface ListProps {
   /**
    * Show a border around the list
@@ -14,7 +16,7 @@ export interface ListProps {
   /**
    * The color of the list
    */
-  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  color?: MellowColor;
   /**
    * The button size.
    */

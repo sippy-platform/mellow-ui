@@ -3,6 +3,8 @@ import useColor from '@hooks/useColor';
 
 import clsx from 'clsx';
 
+import { MellowColor } from '@types';
+
 export interface AvatarProps {
   /**
    * The text for the avatar
@@ -19,7 +21,7 @@ export interface AvatarProps {
   /**
    * The color of the avatar, only works when the variant is `color` or `hover`
    */
-  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent' | true;
+  color?: MellowColor | true;
   /**
    * The avatar size.
    */

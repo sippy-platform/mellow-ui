@@ -2,11 +2,13 @@ import { ReactNode } from 'react';
 
 import clsx from 'clsx';
 
+import { MellowColor } from '@types';
+
 export interface BottomBarProps {
   /**
    * The color of the bottom bar
    */
-  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  color?: MellowColor;
   /**
    * Custom classes for the bottom nav
    */

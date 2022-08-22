@@ -182,4 +182,4 @@ export type { ToolbarProps } from '@components/Toolbar';
 
 export { default as useColor } from '@hooks/useColor';
 
-export { MellowColors } from '@types';
+export { MellowColor } from '@types';

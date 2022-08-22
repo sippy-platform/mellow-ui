@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 
 import clsx from 'clsx';
 
+import { MellowColor } from '@types';
+
 export interface ProgressProps {
   /**
    * The highest value on the progress bar
@@ -14,7 +16,7 @@ export interface ProgressProps {
   /**
    * Color of the progress bar
    */
-  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  color?: MellowColor;
   /**
    * Size of the progress bar
    */

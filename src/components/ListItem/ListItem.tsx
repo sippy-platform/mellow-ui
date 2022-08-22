@@ -2,6 +2,8 @@ import { ComponentPropsWithoutRef, ElementType, ReactNode, useMemo } from 'react
 
 import clsx from 'clsx';
 
+import { MellowColor } from '@types';
+
 export type ListItemProps<T extends ElementType> = {
   /**
    * Show a label around the list
@@ -26,7 +28,7 @@ export type ListItemProps<T extends ElementType> = {
   /**
    * The color of the list item
    */
-  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  color?: MellowColor;
   /**
    * Theme the item fully
    */

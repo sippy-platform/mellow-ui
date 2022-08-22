@@ -2,6 +2,8 @@ import React, { ReactNode } from 'react';
 
 import clsx from 'clsx';
 
+import { MellowColor } from '@types';
+
 export interface LabelProps {
   /**
    * The variant of the button.
@@ -10,7 +12,7 @@ export interface LabelProps {
   /**
    * The color of the button, only works when the variant is `color` or `hover`
    */
-  color?: 'red' | 'orange' | 'amber' | 'yellow' | 'lime' | 'green' | 'teal' | 'cyan' | 'blue' | 'indigo' | 'violet' | 'purple' | 'pink' | 'rose' | 'brown' | 'grey' | 'accent';
+  color?: MellowColor;
   /**
    * Label contents.
    */

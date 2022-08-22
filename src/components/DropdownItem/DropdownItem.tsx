@@ -10,6 +10,10 @@ export interface DropdownItemProps<T> {
    */
   color?: MellowColor;
   /**
+   * Button active state.
+   */
+  active?: boolean;
+  /**
    * Button disabled state.
    */
   disabled?: boolean;
@@ -43,6 +47,7 @@ export function Dropdown<T>({
   className,
   as,
   color,
+  active,
   disabled = false,
   children,
   onClick,
@@ -52,13 +57,13 @@ export function Dropdown<T>({
 
   return (
     <Menu.Item>
-      {({ active }) => (
+      {({ active: isActive }) => (
         <Component
           type="button"
           className={clsx(
             'dropdown-item',
             {
-              'active': active,
+              'active': isActive || active,
             },
             color,
             className
